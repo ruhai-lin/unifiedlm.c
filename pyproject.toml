@@ -1,0 +1,30 @@
+[project]
+name = "unifiedlm"
+version = "0.1.0"
+description = "UnifiedLM: one associative-memory block for token and channel mixing, on a llama2.c training stack"
+readme = "README.md"
+requires-python = "==3.12.*"
+dependencies = [
+    "torch==2.10.0",
+    "triton==3.6.0",
+    "numpy==2.2.6",
+    "sentencepiece==0.2.1",
+    "requests==2.34.2",
+    "tqdm==4.70.1",
+    "jinja2==3.1.6",
+    "pyyaml==6.0.3",
+    "pyarrow==26.0.0",
+    "huggingface-hub==1.33.0",
+]
+
+# The project is a flat collection of scripts (python train.py ...), not an installable package.
+[tool.uv]
+package = false
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu128" }
+
+[[tool.uv.index]]
+name = "pytorch-cu128"
+url = "https://download.pytorch.org/whl/cu128"
+explicit = true

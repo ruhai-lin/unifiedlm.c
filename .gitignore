@@ -1,0 +1,8 @@
+__pycache__/
+.venv/
+references/
+scripts/
+data/
+outputs/
+run
+*.pt
