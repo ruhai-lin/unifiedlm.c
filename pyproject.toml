@@ -15,6 +15,7 @@ dependencies = [
     "pyyaml==6.0.3",
     "pyarrow==26.0.0",
     "huggingface-hub==1.33.0",
+    "wandb==0.27.2",
 ]
 
 # The project is a flat collection of scripts (python train.py ...), not an installable package.
