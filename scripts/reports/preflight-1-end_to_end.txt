@@ -1,0 +1,19 @@
+Checked 57 packages in 9ms
+3.12.16 torch 2.10.0+cu128 triton 3.6.0 cuda True NVIDIA A40
+test_chunked_equals_dense: ok
+test_parallel_equals_recurrent: ok
+test_causality: ok
+test_gradients_finite: ok
+test_kernel: ok
+skipping test_runc: build ./run with `make run` first
+test_runc: ok
+seed: same seed reproduces the init, different seed changes it
+S and D: same init, NLL 6.24285 vs 6.24295 on identical weights
+p_free: 350,022 params, NLL 6.24488
+p_a: 258,432 params, NLL 6.25824
+p_b: 258,372 params, NLL 6.24626
+p_c: 258,672 params, NLL 6.25852
+a: 258,352 params, NLL 6.24368
+refused: evaluation without variant.json, and resume
+preflight passed
+PREFLIGHT_A_PASSED

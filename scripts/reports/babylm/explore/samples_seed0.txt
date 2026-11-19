@@ -1,0 +1,32 @@
+== tokens ==
+The | little | dog | ran | to | the | park | .
+
+== short prompts (context < 512) ==
+
+PROMPT: Mommy, can I have
+  [S] "some?\n*CHI:<unk>can I have some?\n*URS:<unk>I don't know.\n*CHI:<unk>you only got some.\n*CHI:<unk>I not going to eat all my"
+  [P-free] "some?\n*CHI:<unk>I wan' 'a put some in the plate with your plate?\n[mother takes out a small plate with another plate.]\n*CHI:<unk>put some in the plate"
+  [T] "some?\nA:<unk>I don't know.\n*MOT:<unk>I don't know.\n*MOT:<unk>that's what I'm saying.\n*MOT:<unk>how are we having a party"
+
+PROMPT: Once upon a time there was a king who
+  [S] 'was the king. His son, Richard, died on her death death, but his father was not his son.\nJacob, what a good boy in his kingdom could have not been any king.\nIn'
+  [P-free] 'was the king had to return the bar bar bar bar bar bar bar bar bar bar bar bar bar bar bar bar bar bar bar bar bar bar bar bar bar bar bar bar bar bar bar bar bar'
+  [T] 'was the king and king, the king, who had come to this land to do as they said, had come to this country, and so long as the king himself would be gone. The king'
+
+PROMPT: Paris is the capital of
+  [S] 'the United States. It is the capital of the capital of the United States.\n= = = 2018–1988 = = =\nThe 2018–1'
+  [P-free] 'the Czech Republic. It is the capital of the Czech Republic between 2003 and 2010.\nHistory.\nThe capital of the Czech Republic were not the Republic of the Czech'
+  [T] 'the the capital city.\nIt has the oldest population of the province.\nIt has six and thirteen its population.\nIts capital has a population of 7,028.\nWe had a population of'
+
+== long context ==
+LAST 400 TOKENS OF CONTEXT: 'u see, miss, it is quite impossible for me to have extra fires without charging for them."\n"Certainly. Well, I don\'t think there will be any extra dinner in future. And now please tell me exactly how much is due to you."\n"Four pounds, miss; but if I\'m paid one, on account, I shan\'t mind waiting. I\'d be really sorry to dislodge such a nice lady as your mother, Miss Staunton."\n"Here is the money in full," said Effie. "Will you give me a receipt?"\n"Oh, with pleasure, miss. Won\'t you sit down? I hope, Miss Staunton, nothing will induce your good mother to move from here. I will do everything in my'
+TRUE CONTINUATION: 'power to make her comfortable."\n"You must understand," said Effie, "that in future she only pays fifteen shillings a week without extras. My sisters Agnes and Katie are quite old enough to do all the waiting which my mother requires. In fact they must do so, for we can\'t afford'
+
+  [S] after 400 tokens : 'mind the way you do, and I feel that I am too happy to get back to you."\n"I never knew how your mother had told me about her; but I shall be glad if I ought."\n"You do not think of it.'
+  [S] after 1800 tokens: 'mind the moment before. It is quite a delightful place to take this fine evening with us."\n"And are you going to help me out with this, miss? Where is that," said the lady. "I can do it, even if anything'
+
+  [P-free] after 400 tokens : 'mind the income is to be made. I shall be as proud as the one with the rest of my health. I was only a pretty young lady, and I have not much of that kind, Miss Staunton, and do I think I shall be'
+  [P-free] after 1800 tokens: 'head the paper and make the the three three of her own store.\n"I don\'t mean because I have never really considered what Betty Betty Betty Betty Betty Betty Betty Betty Betty Betty Betty Betty Betty Betty Betty Betty Betty Betty Betty Betty Betty Betty Betty Betty'
+
+  [T] after 400 tokens : "mind, and I will do it. I shall be as thankful to have you with your mother's fare as a reward for your own money. Why, how could you not have had this money in the hospital, if you could have got it up"
+  [T] after 1800 tokens: 'dear, you will be the same. Effie\'s health as I would not to his father and then, "The momentary, Marcia, I am for the subject me not, Effie, if we may."\n"You knowest Clara\'s not going'

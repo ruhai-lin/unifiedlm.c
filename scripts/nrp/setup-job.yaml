@@ -1,0 +1,40 @@
+# Builds the environment tarball and the tokens. CPU only. __SHA__ is the staged source commit.
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: ulm-setup-__SHORT__
+  namespace: garyyang
+  labels: {app: ulm-setup}
+spec:
+  backoffLimit: 0
+  activeDeadlineSeconds: 21600
+  ttlSecondsAfterFinished: 604800
+  template:
+    metadata:
+      labels: {app: ulm-setup}
+    spec:
+      restartPolicy: Never
+      containers:
+      - name: setup
+        image: python:3.12-slim-bookworm
+        command: ["bash", "-c"]
+        args:
+        - |
+          set -euo pipefail
+          cp -r /workspace/src/__SHA__ /scratch/src
+          cd /scratch/src
+          bash scripts/nrp/setup.sh
+        resources:
+          requests: {cpu: "8", memory: 24Gi}
+          limits: {cpu: "8", memory: 24Gi}
+        volumeMounts:
+        - {name: ulm-storage, mountPath: /workspace}
+        - {name: scratch, mountPath: /scratch}
+        - {name: opt, mountPath: /opt/ulm}
+      volumes:
+      - name: ulm-storage
+        persistentVolumeClaim: {claimName: ulm-storage}
+      - name: scratch
+        emptyDir: {sizeLimit: 60Gi}
+      - name: opt
+        emptyDir: {sizeLimit: 30Gi}

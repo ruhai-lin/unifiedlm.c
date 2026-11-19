@@ -1,0 +1,20 @@
+# Copies source into ulm-storage and results out of it. Delete it when finished.
+apiVersion: v1
+kind: Pod
+metadata:
+  name: ulm-stage
+  namespace: garyyang
+spec:
+  containers:
+  - name: stage
+    image: ubuntu:22.04
+    command: ["sleep", "7200"]
+    volumeMounts:
+    - {name: ulm-storage, mountPath: /workspace}
+    resources:
+      requests: {cpu: "1", memory: 2Gi}
+      limits: {cpu: "1", memory: 2Gi}
+  volumes:
+  - name: ulm-storage
+    persistentVolumeClaim: {claimName: ulm-storage}
+  restartPolicy: Never

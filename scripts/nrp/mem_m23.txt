@@ -1,0 +1,6 @@
+m2_s_d128 --task=m2 --model=S --dim=128 --lr=1e-3 --steps=40000 --counts=16 --gmax=256 --gaps=0,64,256,1024,4096 --batch=128
+m2_p_d128 --task=m2 --model=P --dim=128 --lr=1e-3 --steps=40000 --counts=16 --gmax=256 --gaps=0,64,256,1024,4096 --batch=128
+m2_t_d128 --task=m2 --model=T --dim=128 --lr=1e-3 --steps=40000 --counts=16 --gmax=256 --gaps=0,64,256,1024,4096 --batch=128
+m3_s_d128 --task=m3 --model=S --dim=128 --lr=1e-3 --steps=40000 --counts=8,32,128 --seq=640 --batch=64
+m3_p_d128 --task=m3 --model=P --dim=128 --lr=1e-3 --steps=40000 --counts=8,32,128 --seq=640 --batch=64
+m3_t_d128 --task=m3 --model=T --dim=128 --lr=1e-3 --steps=40000 --counts=8,32,128 --seq=640 --batch=64

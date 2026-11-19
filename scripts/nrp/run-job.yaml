@@ -1,0 +1,58 @@
+# One A40 per pod. Each index is one independent run, so __PARALLELISM__ sets how many cards run at once;
+# multi-GPU DDP is not used, since it would change the data stream that all runs share.
+# An interrupted index restarts from scratch on local disk. Nothing is resumed.
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: __NAME__
+  namespace: garyyang
+  labels: {app: ulm-run, run: __NAME__}
+spec:
+  completionMode: Indexed
+  completions: __COMPLETIONS__
+  parallelism: __PARALLELISM__
+  backoffLimitPerIndex: __RETRIES__
+  activeDeadlineSeconds: 604800
+  ttlSecondsAfterFinished: 1209600
+  template:
+    metadata:
+      labels: {app: ulm-run, run: __NAME__}
+    spec:
+      restartPolicy: Never
+      containers:
+      - name: run
+        image: python:3.12-slim-bookworm
+        command: ["bash", "-c"]
+        args:
+        - |
+          set -euo pipefail
+          # Triton builds its CUDA runtime helper with a C compiler at first use
+          apt-get update -qq
+          DEBIAN_FRONTEND=noninteractive apt-get install -y -qq gcc libc6-dev > /dev/null
+          tar -C /opt/ulm -xf /workspace/env/venv-__LOCK__.tar
+          mkdir -p /scratch/data
+          cp -r /workspace/data/tok512 /scratch/data/
+          (cd /scratch/data/tok512 && sha256sum -c --quiet /workspace/data/tok512.sha256)
+          cp -r /workspace/src/__SHA__ /scratch/src
+          cd /scratch/src
+          ln -s /scratch/data data
+          export PATH=/opt/ulm/venv/bin:$PATH
+          bash scripts/nrp/__COMMAND__
+        env:
+        - {name: PYTHONUNBUFFERED, value: "1"}
+        - name: NODE_NAME
+          valueFrom: {fieldRef: {fieldPath: spec.nodeName}}
+        resources:
+          requests: {cpu: "3", memory: 12Gi, nvidia.com/a40: "1"}
+          limits: {cpu: "3", memory: 12Gi, nvidia.com/a40: "1"}
+        volumeMounts:
+        - {name: ulm-storage, mountPath: /workspace}
+        - {name: scratch, mountPath: /scratch}
+        - {name: opt, mountPath: /opt/ulm}
+      volumes:
+      - name: ulm-storage
+        persistentVolumeClaim: {claimName: ulm-storage}
+      - name: scratch
+        emptyDir: {sizeLimit: 40Gi}
+      - name: opt
+        emptyDir: {sizeLimit: 30Gi}

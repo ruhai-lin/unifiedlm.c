@@ -1,0 +1,5 @@
+pilot_s_d128 --model=S --dim=128 --lr=1e-3 --steps=40000
+pilot_p_d128 --model=P --dim=128 --lr=1e-3 --steps=40000
+pilot_t_d128 --model=T --dim=128 --lr=1e-3 --steps=40000
+pilot_t_d128_lr3e-4 --model=T --dim=128 --lr=3e-4 --steps=40000
+pilot_t_d128_lr3e-3 --model=T --dim=128 --lr=3e-3 --steps=40000

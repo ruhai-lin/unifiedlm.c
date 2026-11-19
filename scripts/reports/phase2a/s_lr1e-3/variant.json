@@ -1,0 +1,26 @@
+{
+  "variant": "S",
+  "m_s": 0,
+  "m_f": 0,
+  "argv": [
+    "--out_dir=/scratch/out",
+    "--vocab_source=custom",
+    "--vocab_size=512",
+    "--dim=64",
+    "--n_layers=10",
+    "--hidden_dim=140",
+    "--max_seq_len=512",
+    "--batch_size=128",
+    "--gradient_accumulation_steps=1",
+    "--weight_decay=0.01",
+    "--beta2=0.99",
+    "--dropout=0.05",
+    "--eval_iters=100",
+    "--log_interval=100",
+    "--seed=1337",
+    "--learning_rate=1e-3",
+    "--warmup_iters=50",
+    "--max_iters=5000",
+    "--eval_interval=1000"
+  ]
+}

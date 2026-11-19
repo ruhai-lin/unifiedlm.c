@@ -1,0 +1,54 @@
+== KERNEL CHECK ulm
+FAIL control S m_s=0     m_f=0     d=64   T=512  float16  compiled=True  whole 3.78e-03 ctrl 3.00e-03 ratio/S 1.000 cos 0.999993 loss 6.03e-06 excess 2.03e-03 (mu.weight) log_rate 7.12e-02 ctrl 6.86e-03 share 1.3e-03 raw 7.12e-02 (log_rate, share 1.3e-03)
+ok   S m_s=0     m_f=0     d=288  T=256  float32  compiled=False whole 1.91e-03 ctrl 5.86e-07 ratio/S 1.000 cos 0.999998 loss 2.59e-06 excess 3.32e-03 (key.weight) log_rate 2.57e-03 ctrl 2.83e-07 share 1.4e-02 raw 4.07e-03 (log_eps, share 4.3e-05)
+FAIL control S m_s=0     m_f=0     d=288  T=256  float16  compiled=False whole 3.15e-03 ctrl 2.43e-03 ratio/S 1.000 cos 0.999995 loss 7.67e-06 excess 1.36e-03 (weight) log_rate 4.24e-03 ctrl 1.72e-04 share 1.4e-02 raw 8.06e-03 (conv.weight, share 1.9e-03)
+/content/venv/lib/python3.12/site-packages/torch/_inductor/compile_fx.py:2900: UserWarning: Tesla T4 does not support bfloat16 compilation natively, skipping
+  warnings.warn(
+/content/venv/lib/python3.12/site-packages/torch/_inductor/compile_fx.py:2900: UserWarning: Tesla T4 does not support bfloat16 compilation natively, skipping
+  warnings.warn(
+/content/venv/lib/python3.12/site-packages/torch/_inductor/compile_fx.py:2900: UserWarning: Tesla T4 does not support bfloat16 compilation natively, skipping
+  warnings.warn(
+/content/venv/lib/python3.12/site-packages/torch/_inductor/compile_fx.py:2900: UserWarning: Tesla T4 does not support bfloat16 compilation natively, skipping
+  warnings.warn(
+/content/venv/lib/python3.12/site-packages/torch/_inductor/compile_fx.py:2900: UserWarning: Tesla T4 does not support bfloat16 compilation natively, skipping
+  warnings.warn(
+/content/venv/lib/python3.12/site-packages/torch/_dynamo/variables/functions.py:1946: UserWarning: Dynamo does not know how to trace the builtin `triton._C.libtriton.native_specialize_impl.` This function is either a Python builtin (e.g. _warnings.warn) or a third-party C/C++ Python extension (perhaps created with pybind).
+If it is a Python builtin, please file an issue on GitHub so the PyTorch team can add support for it and see the next case for a workaround.
+If it is a third-party C/C++ Python extension, please either wrap it into a PyTorch-understood custom operator (see https://pytorch.org/tutorials/advanced/custom_ops_landing_page.html for more details) or, if it is traceable, use `torch.compiler.allow_in_graph`.
+  torch._dynamo.utils.warn_once(explanation + "\n" + "\n".join(hints))
+/content/venv/lib/python3.12/site-packages/torch/_inductor/compile_fx.py:2900: UserWarning: Tesla T4 does not support bfloat16 compilation natively, skipping
+  warnings.warn(
+FAIL control S m_s=0     m_f=0     d=288  T=256  float16  compiled=True  whole 3.19e-03 ctrl 2.44e-03 ratio/S 1.000 cos 0.999995 loss 1.42e-06 excess 1.52e-03 (key.weight) log_rate 1.86e-03 ctrl 3.15e-04 share 1.4e-02 raw 8.27e-03 (conv.weight, share 1.9e-03)
+ok   S m_s=0     m_f=0     d=64   T=200  float32  compiled=False whole 1.87e-03 ctrl 3.08e-07 ratio/S 1.000 cos 0.999998 loss 7.97e-08 excess 4.36e-03 (key.bias) log_rate 1.50e-02 ctrl 6.13e-08 share 2.2e-03 raw 1.50e-02 (log_rate, share 2.2e-03)
+FAIL control S m_s=0     m_f=0     d=64   T=200  float16  compiled=False whole 2.25e-03 ctrl 1.34e-03 ratio/S 1.000 cos 0.999998 loss 9.89e-06 excess 2.29e-03 (key.bias) log_rate 1.80e-02 ctrl 5.81e-04 share 2.2e-03 raw 1.80e-02 (log_rate, share 2.2e-03)
+/content/venv/lib/python3.12/site-packages/torch/_inductor/compile_fx.py:2900: UserWarning: Tesla T4 does not support bfloat16 compilation natively, skipping
+  warnings.warn(
+/content/venv/lib/python3.12/site-packages/torch/_inductor/compile_fx.py:2900: UserWarning: Tesla T4 does not support bfloat16 compilation natively, skipping
+  warnings.warn(
+/content/venv/lib/python3.12/site-packages/torch/_inductor/compile_fx.py:2900: UserWarning: Tesla T4 does not support bfloat16 compilation natively, skipping
+  warnings.warn(
+/content/venv/lib/python3.12/site-packages/torch/_inductor/compile_fx.py:2900: UserWarning: Tesla T4 does not support bfloat16 compilation natively, skipping
+  warnings.warn(
+/content/venv/lib/python3.12/site-packages/torch/_inductor/compile_fx.py:2900: UserWarning: Tesla T4 does not support bfloat16 compilation natively, skipping
+  warnings.warn(
+/content/venv/lib/python3.12/site-packages/torch/_dynamo/variables/functions.py:1946: UserWarning: Dynamo does not know how to trace the builtin `triton._C.libtriton.native_specialize_impl.` This function is either a Python builtin (e.g. _warnings.warn) or a third-party C/C++ Python extension (perhaps created with pybind).
+If it is a Python builtin, please file an issue on GitHub so the PyTorch team can add support for it and see the next case for a workaround.
+If it is a third-party C/C++ Python extension, please either wrap it into a PyTorch-understood custom operator (see https://pytorch.org/tutorials/advanced/custom_ops_landing_page.html for more details) or, if it is traceable, use `torch.compiler.allow_in_graph`.
+  torch._dynamo.utils.warn_once(explanation + "\n" + "\n".join(hints))
+/content/venv/lib/python3.12/site-packages/torch/_inductor/compile_fx.py:2900: UserWarning: Tesla T4 does not support bfloat16 compilation natively, skipping
+  warnings.warn(
+FAIL control S m_s=0     m_f=0     d=64   T=200  float16  compiled=True  whole 2.46e-03 ctrl 1.40e-03 ratio/S 1.000 cos 0.999997 loss 3.60e-06 excess 3.03e-03 (key.bias) log_rate 1.06e-02 ctrl 4.82e-04 share 2.0e-03 raw 1.52e-02 (conv.weight, share 7.6e-04)
+6 failures
+== KERNEL CHECK ulm_fp16
+ok   S m_s=0     m_f=0     d=64   T=512  float32  compiled=False whole 9.19e-04 ctrl 4.48e-07 ratio/S 1.000 cos 1.000000 loss 1.81e-07 excess 3.78e-03 (key.weight) log_rate 3.64e-02 ctrl 2.05e-06 share 1.5e-03 raw 3.64e-02 (log_rate, share 1.5e-03)
+ok   S m_s=0     m_f=0     d=64   T=512  float16  compiled=False whole 3.03e-03 ctrl 3.12e-03 ratio/S 1.000 cos 0.999995 loss 6.03e-06 excess 1.51e-03 (conv.weight) log_rate 5.38e-02 ctrl 4.26e-04 share 1.5e-03 raw 5.38e-02 (log_rate, share 1.5e-03)
+W1110 02:48:40.820000 24727 torch/_inductor/utils.py:1679] [0/0] Not enough SMs to use max_autotune_gemm mode
+ok   S m_s=0     m_f=0     d=64   T=512  float16  compiled=True  whole 3.18e-03 ctrl 3.00e-03 ratio/S 1.000 cos 0.999995 loss 5.64e-07 excess 1.13e-03 (conv.weight) log_rate 2.71e-02 ctrl 5.35e-04 share 1.1e-02 raw 2.71e-02 (log_rate, share 1.1e-02)
+ok   S m_s=0     m_f=0     d=288  T=256  float32  compiled=False whole 4.52e-04 ctrl 5.86e-07 ratio/S 1.000 cos 1.000000 loss 1.43e-08 excess 1.43e-03 (key.weight) log_rate 2.41e-03 ctrl 1.74e-07 share 1.5e-02 raw 2.41e-03 (log_rate, share 1.5e-02)
+ok   S m_s=0     m_f=0     d=288  T=256  float16  compiled=False whole 2.49e-03 ctrl 2.43e-03 ratio/S 1.000 cos 0.999997 loss 2.33e-06 excess 7.94e-04 (key.bias) log_rate 9.84e-04 ctrl 2.62e-04 share 3.1e-02 raw 7.35e-03 (conv.weight, share 1.9e-03)
+ok   S m_s=0     m_f=0     d=288  T=256  float16  compiled=True  whole 2.55e-03 ctrl 2.44e-03 ratio/S 1.000 cos 0.999997 loss 8.74e-07 excess 6.74e-04 (conv.weight) log_rate 1.74e-03 ctrl 3.15e-04 share 1.4e-02 raw 7.65e-03 (conv.weight, share 1.9e-03)
+ok   S m_s=0     m_f=0     d=64   T=200  float32  compiled=False whole 3.87e-04 ctrl 3.08e-07 ratio/S 1.000 cos 1.000000 loss 3.86e-07 excess 2.30e-03 (key.weight) log_rate 1.18e-02 ctrl 1.89e-07 share 2.0e-03 raw 1.18e-02 (log_rate, share 2.0e-03)
+ok   S m_s=0     m_f=0     d=64   T=200  float16  compiled=False whole 1.32e-03 ctrl 1.34e-03 ratio/S 1.000 cos 0.999999 loss 6.74e-06 excess 1.03e-03 (conv.weight) log_rate 2.39e-03 ctrl 1.88e-03 share 3.3e-03 raw 1.32e-02 (conv.weight, share 7.6e-04)
+ok   S m_s=0     m_f=0     d=64   T=200  float16  compiled=True  whole 1.27e-03 ctrl 1.40e-03 ratio/S 1.000 cos 0.999999 loss 1.50e-07 excess 1.22e-03 (conv.weight) log_rate 1.71e-02 ctrl 7.38e-05 share 2.2e-03 raw 1.71e-02 (log_rate, share 2.2e-03)
+0 failures
+== KERNEL DONE

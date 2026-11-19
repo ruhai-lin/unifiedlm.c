@@ -1,0 +1,4 @@
+m2kv_s_d32 --task=m2 --filler=kv --model=S --dim=32 --lr=1e-3 --steps=40000 --counts=16 --gmax=256 --gaps=0,64,256,1024,4096 --batch=128
+m2kv_p_d32 --task=m2 --filler=kv --model=P --dim=32 --lr=1e-3 --steps=40000 --counts=16 --gmax=256 --gaps=0,64,256,1024,4096 --batch=128
+m3_s_d32 --task=m3 --model=S --dim=32 --lr=1e-3 --steps=40000 --counts=8,32,128 --seq=640 --batch=64
+m3_p_d32 --task=m3 --model=P --dim=32 --lr=1e-3 --steps=40000 --counts=8,32,128 --seq=640 --batch=64

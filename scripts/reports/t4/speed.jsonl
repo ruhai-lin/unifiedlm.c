@@ -1,0 +1,8 @@
+{"gpu": "Tesla T4", "torch": "2.10.0+cu128", "cpus": 2}
+{"variant": "S", "size": "15M", "params": 15167352, "bs": 8, "seq": 1024, "ms_per_step": 368.6, "tok_per_s": 22227, "peak_gib": 3.33, "warmup_s": 902.5, "gpu": "Tesla T4", "dtype": "float16", "loss": 6.989}
+{"variant": "S", "size": "15M", "params": 15167352, "bs": 16, "seq": 1024, "ms_per_step": 712.4, "tok_per_s": 22997, "peak_gib": 6.42, "warmup_s": 223.9, "gpu": "Tesla T4", "dtype": "float16", "loss": 7.298}
+{"variant": "S", "size": "15M", "bs": 32, "failed": "oom"}
+{"variant": "T", "size": "15M", "params": 15191712, "bs": 8, "seq": 1024, "ms_per_step": 86.4, "tok_per_s": 94859, "peak_gib": 2.16, "warmup_s": 31.4, "gpu": "Tesla T4", "dtype": "float16", "loss": 6.198}
+{"variant": "T", "size": "15M", "params": 15191712, "bs": 16, "seq": 1024, "ms_per_step": 165.6, "tok_per_s": 98964, "peak_gib": 4.12, "warmup_s": 31.1, "gpu": "Tesla T4", "dtype": "float16", "loss": 6.31}
+{"variant": "T", "size": "15M", "params": 15191712, "bs": 32, "seq": 1024, "ms_per_step": 310.6, "tok_per_s": 105498, "peak_gib": 8.02, "warmup_s": 31.7, "gpu": "Tesla T4", "dtype": "float16", "loss": 6.713}
+{"variant": "T", "size": "15M", "bs": 64, "failed": "oom"}

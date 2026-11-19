@@ -1,0 +1,4 @@
+s lr=2e-3 20K val 1.3291
+d lr=2e-3 20K val 1.3306
+peq105x70 lr=2e-3 20K val 1.3460
+a lr=2e-3 20K val 1.3566

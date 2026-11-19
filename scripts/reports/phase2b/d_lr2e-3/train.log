@@ -1,0 +1,281 @@
+Overriding: out_dir = /scratch/out
+Overriding: vocab_source = custom
+Overriding: vocab_size = 512
+Overriding: dim = 64
+Overriding: n_layers = 10
+Overriding: hidden_dim = 140
+Overriding: max_seq_len = 512
+Overriding: batch_size = 128
+Overriding: gradient_accumulation_steps = 1
+Overriding: weight_decay = 0.01
+Overriding: beta2 = 0.99
+Overriding: dropout = 0.05
+Overriding: eval_iters = 100
+Overriding: log_interval = 100
+Overriding: seed = 1337
+Overriding: learning_rate = 0.002
+Overriding: warmup_iters = 200
+Overriding: max_iters = 20000
+Overriding: eval_interval = 2000
+tokens per iteration will be: 65,536
+breaks down as: 1 grad accum steps * 1 processes * 128 batch size * 512 max seq len
+Initializing a new model from scratch
+UnifiedLM: 10 blocks x 140 slots, 259,012 parameters
+num decayed parameter tensors: 41, with 255,488 parameters
+num non-decayed parameter tensors: 51, with 3,524 parameters
+using fused AdamW: True
+compiling the model... (takes a ~minute)
+Created a PretokDataset with rng seed 42
+Created a PretokDataset with rng seed 42
+Created a PretokDataset with rng seed 42
+step 0: train loss 6.2484, val loss 6.2485
+0 | loss 6.2480 | lr 0.000000e+00 | 90508.23ms | 724 tok/s | mfu -100.00%
+100 | loss 4.8376 | lr 1.000000e-03 | 44.11ms | 1,485,835 tok/s | mfu 1.88%
+200 | loss 3.5571 | lr 2.000000e-03 | 44.13ms | 1,485,224 tok/s | mfu 1.88%
+300 | loss 2.4226 | lr 1.999874e-03 | 44.12ms | 1,485,417 tok/s | mfu 1.88%
+400 | loss 2.0696 | lr 1.999497e-03 | 44.00ms | 1,489,587 tok/s | mfu 1.88%
+500 | loss 1.9149 | lr 1.998867e-03 | 44.15ms | 1,484,302 tok/s | mfu 1.88%
+600 | loss 1.7925 | lr 1.997987e-03 | 44.04ms | 1,488,030 tok/s | mfu 1.88%
+700 | loss 1.7948 | lr 1.996855e-03 | 44.08ms | 1,486,598 tok/s | mfu 1.88%
+800 | loss 1.7627 | lr 1.995472e-03 | 44.07ms | 1,487,161 tok/s | mfu 1.88%
+900 | loss 1.6985 | lr 1.993838e-03 | 44.10ms | 1,486,011 tok/s | mfu 1.88%
+1000 | loss 1.6974 | lr 1.991955e-03 | 44.12ms | 1,485,321 tok/s | mfu 1.88%
+1100 | loss 1.6265 | lr 1.989821e-03 | 44.09ms | 1,486,518 tok/s | mfu 1.88%
+1200 | loss 1.7032 | lr 1.987439e-03 | 44.09ms | 1,486,365 tok/s | mfu 1.88%
+1300 | loss 1.6437 | lr 1.984808e-03 | 44.11ms | 1,485,594 tok/s | mfu 1.88%
+1400 | loss 1.6371 | lr 1.981929e-03 | 44.09ms | 1,486,260 tok/s | mfu 1.88%
+1500 | loss 1.6255 | lr 1.978802e-03 | 44.19ms | 1,483,101 tok/s | mfu 1.88%
+1600 | loss 1.6204 | lr 1.975430e-03 | 44.23ms | 1,481,766 tok/s | mfu 1.88%
+1700 | loss 1.6102 | lr 1.971812e-03 | 44.17ms | 1,483,869 tok/s | mfu 1.88%
+1800 | loss 1.5788 | lr 1.967949e-03 | 44.14ms | 1,484,823 tok/s | mfu 1.88%
+1900 | loss 1.5935 | lr 1.963842e-03 | 44.15ms | 1,484,230 tok/s | mfu 1.88%
+Created a PretokDataset with rng seed 42
+Created a PretokDataset with rng seed 42
+step 2000: train loss 1.5025, val loss 1.5037
+saving best.pt to /scratch/out
+saving ckpt.pt to /scratch/out
+2000 | loss 1.6157 | lr 1.959493e-03 | 3538.61ms | 18,520 tok/s | mfu 1.69%
+2100 | loss 1.5789 | lr 1.954902e-03 | 44.12ms | 1,485,345 tok/s | mfu 1.71%
+2200 | loss 1.5846 | lr 1.950071e-03 | 44.11ms | 1,485,762 tok/s | mfu 1.73%
+2300 | loss 1.5489 | lr 1.945001e-03 | 44.09ms | 1,486,526 tok/s | mfu 1.75%
+2400 | loss 1.5611 | lr 1.939693e-03 | 43.99ms | 1,489,692 tok/s | mfu 1.76%
+2500 | loss 1.5570 | lr 1.934148e-03 | 44.09ms | 1,486,510 tok/s | mfu 1.77%
+2600 | loss 1.5549 | lr 1.928368e-03 | 44.13ms | 1,485,208 tok/s | mfu 1.78%
+2700 | loss 1.5263 | lr 1.922354e-03 | 44.25ms | 1,481,015 tok/s | mfu 1.79%
+2800 | loss 1.5477 | lr 1.916108e-03 | 44.15ms | 1,484,390 tok/s | mfu 1.80%
+2900 | loss 1.5313 | lr 1.909632e-03 | 44.03ms | 1,488,546 tok/s | mfu 1.81%
+3000 | loss 1.5306 | lr 1.902927e-03 | 44.02ms | 1,488,667 tok/s | mfu 1.82%
+3100 | loss 1.5350 | lr 1.895994e-03 | 44.14ms | 1,484,743 tok/s | mfu 1.82%
+3200 | loss 1.5400 | lr 1.888835e-03 | 43.88ms | 1,493,382 tok/s | mfu 1.83%
+3300 | loss 1.5396 | lr 1.881453e-03 | 44.12ms | 1,485,305 tok/s | mfu 1.83%
+3400 | loss 1.5135 | lr 1.873849e-03 | 44.10ms | 1,486,236 tok/s | mfu 1.84%
+3500 | loss 1.5238 | lr 1.866025e-03 | 44.08ms | 1,486,598 tok/s | mfu 1.84%
+3600 | loss 1.5233 | lr 1.857983e-03 | 44.14ms | 1,484,655 tok/s | mfu 1.85%
+3700 | loss 1.5065 | lr 1.849725e-03 | 44.26ms | 1,480,704 tok/s | mfu 1.85%
+3800 | loss 1.4968 | lr 1.841254e-03 | 44.15ms | 1,484,334 tok/s | mfu 1.85%
+3900 | loss 1.5242 | lr 1.832570e-03 | 44.15ms | 1,484,422 tok/s | mfu 1.86%
+Created a PretokDataset with rng seed 42
+Created a PretokDataset with rng seed 42
+step 4000: train loss 1.4155, val loss 1.4170
+saving best.pt to /scratch/out
+saving ckpt.pt to /scratch/out
+4000 | loss 1.5047 | lr 1.823677e-03 | 3444.74ms | 19,025 tok/s | mfu 1.67%
+4100 | loss 1.4894 | lr 1.814576e-03 | 44.12ms | 1,485,497 tok/s | mfu 1.69%
+4200 | loss 1.4778 | lr 1.805270e-03 | 44.13ms | 1,484,920 tok/s | mfu 1.71%
+4300 | loss 1.5162 | lr 1.795762e-03 | 44.11ms | 1,485,586 tok/s | mfu 1.73%
+4400 | loss 1.4931 | lr 1.786053e-03 | 44.11ms | 1,485,594 tok/s | mfu 1.74%
+4500 | loss 1.4878 | lr 1.776146e-03 | 44.11ms | 1,485,859 tok/s | mfu 1.76%
+4600 | loss 1.4817 | lr 1.766044e-03 | 44.10ms | 1,486,011 tok/s | mfu 1.77%
+4700 | loss 1.4632 | lr 1.755750e-03 | 43.96ms | 1,490,807 tok/s | mfu 1.78%
+4800 | loss 1.4826 | lr 1.745264e-03 | 43.88ms | 1,493,366 tok/s | mfu 1.79%
+4900 | loss 1.4944 | lr 1.734592e-03 | 44.19ms | 1,483,101 tok/s | mfu 1.80%
+5000 | loss 1.4647 | lr 1.723734e-03 | 44.26ms | 1,480,576 tok/s | mfu 1.81%
+5100 | loss 1.4918 | lr 1.712694e-03 | 44.16ms | 1,484,222 tok/s | mfu 1.82%
+5200 | loss 1.4867 | lr 1.701475e-03 | 44.06ms | 1,487,531 tok/s | mfu 1.82%
+5300 | loss 1.5035 | lr 1.690079e-03 | 44.15ms | 1,484,454 tok/s | mfu 1.83%
+5400 | loss 1.4627 | lr 1.678509e-03 | 44.09ms | 1,486,357 tok/s | mfu 1.83%
+5500 | loss 1.4855 | lr 1.666769e-03 | 44.11ms | 1,485,578 tok/s | mfu 1.84%
+5600 | loss 1.4902 | lr 1.654861e-03 | 44.17ms | 1,483,589 tok/s | mfu 1.84%
+5700 | loss 1.4755 | lr 1.642788e-03 | 44.06ms | 1,487,483 tok/s | mfu 1.85%
+5800 | loss 1.4459 | lr 1.630553e-03 | 44.02ms | 1,488,740 tok/s | mfu 1.85%
+5900 | loss 1.4768 | lr 1.618159e-03 | 44.02ms | 1,488,861 tok/s | mfu 1.85%
+Created a PretokDataset with rng seed 42
+Created a PretokDataset with rng seed 42
+step 6000: train loss 1.3835, val loss 1.3849
+saving best.pt to /scratch/out
+saving ckpt.pt to /scratch/out
+6000 | loss 1.4695 | lr 1.605610e-03 | 3550.92ms | 18,456 tok/s | mfu 1.67%
+6100 | loss 1.4445 | lr 1.592908e-03 | 44.09ms | 1,486,485 tok/s | mfu 1.69%
+6200 | loss 1.4762 | lr 1.580057e-03 | 44.19ms | 1,483,053 tok/s | mfu 1.71%
+6300 | loss 1.4873 | lr 1.567060e-03 | 44.04ms | 1,487,934 tok/s | mfu 1.73%
+6400 | loss 1.4409 | lr 1.553920e-03 | 44.18ms | 1,483,509 tok/s | mfu 1.74%
+6500 | loss 1.4633 | lr 1.540641e-03 | 44.12ms | 1,485,545 tok/s | mfu 1.76%
+6600 | loss 1.4796 | lr 1.527225e-03 | 44.12ms | 1,485,473 tok/s | mfu 1.77%
+6700 | loss 1.4226 | lr 1.513677e-03 | 44.12ms | 1,485,297 tok/s | mfu 1.78%
+6800 | loss 1.4837 | lr 1.500000e-03 | 44.14ms | 1,484,847 tok/s | mfu 1.79%
+6900 | loss 1.4860 | lr 1.486197e-03 | 44.18ms | 1,483,405 tok/s | mfu 1.80%
+7000 | loss 1.4425 | lr 1.472271e-03 | 44.10ms | 1,485,923 tok/s | mfu 1.81%
+7100 | loss 1.4597 | lr 1.458227e-03 | 44.06ms | 1,487,386 tok/s | mfu 1.81%
+7200 | loss 1.4483 | lr 1.444067e-03 | 44.28ms | 1,480,106 tok/s | mfu 1.82%
+7300 | loss 1.4534 | lr 1.429795e-03 | 44.07ms | 1,487,217 tok/s | mfu 1.83%
+7400 | loss 1.4549 | lr 1.415415e-03 | 44.21ms | 1,482,317 tok/s | mfu 1.83%
+7500 | loss 1.4219 | lr 1.400931e-03 | 44.12ms | 1,485,554 tok/s | mfu 1.84%
+7600 | loss 1.4582 | lr 1.386345e-03 | 44.08ms | 1,486,662 tok/s | mfu 1.84%
+7700 | loss 1.4668 | lr 1.371662e-03 | 44.11ms | 1,485,802 tok/s | mfu 1.85%
+7800 | loss 1.4618 | lr 1.356886e-03 | 44.14ms | 1,484,831 tok/s | mfu 1.85%
+7900 | loss 1.4405 | lr 1.342020e-03 | 44.07ms | 1,487,193 tok/s | mfu 1.85%
+Created a PretokDataset with rng seed 42
+Created a PretokDataset with rng seed 42
+step 8000: train loss 1.3654, val loss 1.3667
+saving best.pt to /scratch/out
+saving ckpt.pt to /scratch/out
+8000 | loss 1.4585 | lr 1.327068e-03 | 3443.79ms | 19,030 tok/s | mfu 1.67%
+8100 | loss 1.4416 | lr 1.312033e-03 | 44.09ms | 1,486,534 tok/s | mfu 1.69%
+8200 | loss 1.4242 | lr 1.296920e-03 | 44.18ms | 1,483,221 tok/s | mfu 1.71%
+8300 | loss 1.4198 | lr 1.281733e-03 | 44.11ms | 1,485,690 tok/s | mfu 1.73%
+8400 | loss 1.4477 | lr 1.266474e-03 | 44.14ms | 1,484,671 tok/s | mfu 1.74%
+8500 | loss 1.4404 | lr 1.251148e-03 | 44.13ms | 1,485,112 tok/s | mfu 1.76%
+8600 | loss 1.4615 | lr 1.235759e-03 | 44.15ms | 1,484,494 tok/s | mfu 1.77%
+8700 | loss 1.4561 | lr 1.220311e-03 | 44.10ms | 1,486,148 tok/s | mfu 1.78%
+8800 | loss 1.4375 | lr 1.204807e-03 | 44.07ms | 1,486,984 tok/s | mfu 1.79%
+8900 | loss 1.4604 | lr 1.189251e-03 | 44.12ms | 1,485,481 tok/s | mfu 1.80%
+9000 | loss 1.4193 | lr 1.173648e-03 | 44.06ms | 1,487,338 tok/s | mfu 1.81%
+9100 | loss 1.4420 | lr 1.158001e-03 | 44.18ms | 1,483,341 tok/s | mfu 1.81%
+9200 | loss 1.4539 | lr 1.142315e-03 | 43.98ms | 1,490,176 tok/s | mfu 1.82%
+9300 | loss 1.4411 | lr 1.126592e-03 | 44.15ms | 1,484,246 tok/s | mfu 1.83%
+9400 | loss 1.4313 | lr 1.110838e-03 | 44.25ms | 1,480,904 tok/s | mfu 1.83%
+9500 | loss 1.4180 | lr 1.095056e-03 | 44.14ms | 1,484,815 tok/s | mfu 1.84%
+9600 | loss 1.4756 | lr 1.079250e-03 | 44.13ms | 1,484,936 tok/s | mfu 1.84%
+9700 | loss 1.4604 | lr 1.063424e-03 | 44.11ms | 1,485,690 tok/s | mfu 1.85%
+9800 | loss 1.4629 | lr 1.047582e-03 | 44.09ms | 1,486,566 tok/s | mfu 1.85%
+9900 | loss 1.4404 | lr 1.031728e-03 | 44.24ms | 1,481,510 tok/s | mfu 1.85%
+Created a PretokDataset with rng seed 42
+Created a PretokDataset with rng seed 42
+step 10000: train loss 1.3533, val loss 1.3549
+saving best.pt to /scratch/out
+saving ckpt.pt to /scratch/out
+10000 | loss 1.4114 | lr 1.015866e-03 | 3557.36ms | 18,423 tok/s | mfu 1.67%
+10100 | loss 1.4437 | lr 1.000000e-03 | 44.08ms | 1,486,598 tok/s | mfu 1.69%
+10200 | loss 1.4469 | lr 9.841340e-04 | 44.21ms | 1,482,485 tok/s | mfu 1.71%
+10300 | loss 1.4221 | lr 9.682721e-04 | 44.15ms | 1,484,390 tok/s | mfu 1.73%
+10400 | loss 1.4375 | lr 9.524181e-04 | 44.08ms | 1,486,904 tok/s | mfu 1.74%
+10500 | loss 1.4407 | lr 9.365761e-04 | 44.04ms | 1,487,942 tok/s | mfu 1.76%
+10600 | loss 1.4236 | lr 9.207500e-04 | 44.14ms | 1,484,679 tok/s | mfu 1.77%
+10700 | loss 1.4283 | lr 9.049440e-04 | 44.72ms | 1,465,515 tok/s | mfu 1.78%
+10800 | loss 1.4504 | lr 8.891618e-04 | 44.10ms | 1,486,228 tok/s | mfu 1.79%
+10900 | loss 1.4357 | lr 8.734075e-04 | 44.29ms | 1,479,811 tok/s | mfu 1.80%
+11000 | loss 1.4253 | lr 8.576852e-04 | 44.20ms | 1,482,653 tok/s | mfu 1.80%
+11100 | loss 1.4296 | lr 8.419986e-04 | 44.05ms | 1,487,732 tok/s | mfu 1.81%
+11200 | loss 1.4381 | lr 8.263518e-04 | 44.06ms | 1,487,378 tok/s | mfu 1.82%
+11300 | loss 1.4430 | lr 8.107488e-04 | 44.19ms | 1,483,109 tok/s | mfu 1.83%
+11400 | loss 1.4256 | lr 7.951933e-04 | 44.04ms | 1,488,055 tok/s | mfu 1.83%
+11500 | loss 1.4358 | lr 7.796895e-04 | 44.13ms | 1,485,064 tok/s | mfu 1.84%
+11600 | loss 1.4487 | lr 7.642411e-04 | 44.10ms | 1,486,068 tok/s | mfu 1.84%
+11700 | loss 1.4385 | lr 7.488520e-04 | 44.21ms | 1,482,533 tok/s | mfu 1.84%
+11800 | loss 1.4495 | lr 7.335262e-04 | 44.14ms | 1,484,791 tok/s | mfu 1.85%
+11900 | loss 1.4168 | lr 7.182674e-04 | 44.39ms | 1,476,362 tok/s | mfu 1.85%
+Created a PretokDataset with rng seed 42
+Created a PretokDataset with rng seed 42
+step 12000: train loss 1.3433, val loss 1.3449
+saving best.pt to /scratch/out
+saving ckpt.pt to /scratch/out
+12000 | loss 1.4261 | lr 7.030796e-04 | 3545.26ms | 18,486 tok/s | mfu 1.67%
+12100 | loss 1.4444 | lr 6.879666e-04 | 44.13ms | 1,485,216 tok/s | mfu 1.69%
+12200 | loss 1.4078 | lr 6.729320e-04 | 44.14ms | 1,484,631 tok/s | mfu 1.71%
+12300 | loss 1.4424 | lr 6.579799e-04 | 44.11ms | 1,485,650 tok/s | mfu 1.72%
+12400 | loss 1.4259 | lr 6.431138e-04 | 44.26ms | 1,480,744 tok/s | mfu 1.74%
+12500 | loss 1.4309 | lr 6.283375e-04 | 43.96ms | 1,490,887 tok/s | mfu 1.75%
+12600 | loss 1.4166 | lr 6.136549e-04 | 44.53ms | 1,471,675 tok/s | mfu 1.77%
+12700 | loss 1.4278 | lr 5.990695e-04 | 44.11ms | 1,485,650 tok/s | mfu 1.78%
+12800 | loss 1.4227 | lr 5.845850e-04 | 44.15ms | 1,484,422 tok/s | mfu 1.79%
+12900 | loss 1.4152 | lr 5.702051e-04 | 44.05ms | 1,487,676 tok/s | mfu 1.80%
+13000 | loss 1.4290 | lr 5.559334e-04 | 44.11ms | 1,485,794 tok/s | mfu 1.81%
+13100 | loss 1.4457 | lr 5.417735e-04 | 44.08ms | 1,486,606 tok/s | mfu 1.81%
+13200 | loss 1.4219 | lr 5.277289e-04 | 44.13ms | 1,485,032 tok/s | mfu 1.82%
+13300 | loss 1.4135 | lr 5.138033e-04 | 44.11ms | 1,485,875 tok/s | mfu 1.83%
+13400 | loss 1.4307 | lr 5.000000e-04 | 44.08ms | 1,486,807 tok/s | mfu 1.83%
+13500 | loss 1.4166 | lr 4.863226e-04 | 44.11ms | 1,485,682 tok/s | mfu 1.84%
+13600 | loss 1.4208 | lr 4.727745e-04 | 44.10ms | 1,486,196 tok/s | mfu 1.84%
+13700 | loss 1.4124 | lr 4.593592e-04 | 44.13ms | 1,485,056 tok/s | mfu 1.84%
+13800 | loss 1.4382 | lr 4.460799e-04 | 44.17ms | 1,483,717 tok/s | mfu 1.85%
+13900 | loss 1.4051 | lr 4.329401e-04 | 44.16ms | 1,484,142 tok/s | mfu 1.85%
+Created a PretokDataset with rng seed 42
+Created a PretokDataset with rng seed 42
+step 14000: train loss 1.3367, val loss 1.3382
+saving best.pt to /scratch/out
+saving ckpt.pt to /scratch/out
+14000 | loss 1.4265 | lr 4.199431e-04 | 3447.09ms | 19,012 tok/s | mfu 1.67%
+14100 | loss 1.3974 | lr 4.070921e-04 | 44.12ms | 1,485,433 tok/s | mfu 1.69%
+14200 | loss 1.4429 | lr 3.943903e-04 | 44.27ms | 1,480,481 tok/s | mfu 1.71%
+14300 | loss 1.4171 | lr 3.818410e-04 | 43.74ms | 1,498,266 tok/s | mfu 1.73%
+14400 | loss 1.3905 | lr 3.694473e-04 | 44.05ms | 1,487,604 tok/s | mfu 1.74%
+14500 | loss 1.4491 | lr 3.572124e-04 | 44.17ms | 1,483,597 tok/s | mfu 1.76%
+14600 | loss 1.4170 | lr 3.451393e-04 | 44.19ms | 1,482,989 tok/s | mfu 1.77%
+14700 | loss 1.4327 | lr 3.332310e-04 | 44.11ms | 1,485,658 tok/s | mfu 1.78%
+14800 | loss 1.4369 | lr 3.214906e-04 | 44.06ms | 1,487,547 tok/s | mfu 1.79%
+14900 | loss 1.4105 | lr 3.099210e-04 | 44.13ms | 1,484,903 tok/s | mfu 1.80%
+15000 | loss 1.4134 | lr 2.985251e-04 | 44.09ms | 1,486,276 tok/s | mfu 1.81%
+15100 | loss 1.4182 | lr 2.873058e-04 | 43.92ms | 1,492,069 tok/s | mfu 1.82%
+15200 | loss 1.4090 | lr 2.762660e-04 | 44.15ms | 1,484,519 tok/s | mfu 1.82%
+15300 | loss 1.4287 | lr 2.654083e-04 | 44.19ms | 1,482,989 tok/s | mfu 1.83%
+15400 | loss 1.4224 | lr 2.547356e-04 | 44.29ms | 1,479,787 tok/s | mfu 1.83%
+15500 | loss 1.4336 | lr 2.442504e-04 | 44.13ms | 1,485,072 tok/s | mfu 1.84%
+15600 | loss 1.4569 | lr 2.339556e-04 | 44.14ms | 1,484,647 tok/s | mfu 1.84%
+15700 | loss 1.4014 | lr 2.238535e-04 | 44.15ms | 1,484,350 tok/s | mfu 1.85%
+15800 | loss 1.4305 | lr 2.139469e-04 | 44.12ms | 1,485,281 tok/s | mfu 1.85%
+15900 | loss 1.4265 | lr 2.042382e-04 | 44.10ms | 1,486,003 tok/s | mfu 1.85%
+Created a PretokDataset with rng seed 42
+Created a PretokDataset with rng seed 42
+step 16000: train loss 1.3322, val loss 1.3337
+saving best.pt to /scratch/out
+saving ckpt.pt to /scratch/out
+16000 | loss 1.4169 | lr 1.947297e-04 | 3459.36ms | 18,945 tok/s | mfu 1.67%
+16100 | loss 1.4087 | lr 1.854240e-04 | 44.18ms | 1,483,405 tok/s | mfu 1.69%
+16200 | loss 1.4273 | lr 1.763234e-04 | 44.14ms | 1,484,823 tok/s | mfu 1.71%
+16300 | loss 1.4373 | lr 1.674301e-04 | 56.53ms | 1,159,353 tok/s | mfu 1.68%
+16400 | loss 1.4170 | lr 1.587465e-04 | 44.21ms | 1,482,437 tok/s | mfu 1.70%
+16500 | loss 1.4076 | lr 1.502746e-04 | 44.18ms | 1,483,245 tok/s | mfu 1.72%
+16600 | loss 1.4345 | lr 1.420166e-04 | 44.10ms | 1,486,188 tok/s | mfu 1.74%
+16700 | loss 1.4038 | lr 1.339746e-04 | 44.22ms | 1,482,053 tok/s | mfu 1.75%
+16800 | loss 1.4125 | lr 1.261506e-04 | 44.09ms | 1,486,309 tok/s | mfu 1.76%
+16900 | loss 1.4241 | lr 1.185466e-04 | 44.14ms | 1,484,855 tok/s | mfu 1.78%
+17000 | loss 1.4044 | lr 1.111646e-04 | 44.12ms | 1,485,562 tok/s | mfu 1.79%
+17100 | loss 1.4228 | lr 1.040062e-04 | 43.91ms | 1,492,385 tok/s | mfu 1.80%
+17200 | loss 1.4541 | lr 9.707346e-05 | 44.16ms | 1,484,006 tok/s | mfu 1.80%
+17300 | loss 1.4170 | lr 9.036800e-05 | 44.12ms | 1,485,289 tok/s | mfu 1.81%
+17400 | loss 1.4213 | lr 8.389154e-05 | 44.07ms | 1,486,984 tok/s | mfu 1.82%
+17500 | loss 1.4418 | lr 7.764571e-05 | 44.09ms | 1,486,413 tok/s | mfu 1.83%
+17600 | loss 1.4270 | lr 7.163207e-05 | 44.50ms | 1,472,668 tok/s | mfu 1.83%
+17700 | loss 1.4098 | lr 6.585214e-05 | 44.16ms | 1,483,974 tok/s | mfu 1.83%
+17800 | loss 1.4103 | lr 6.030738e-05 | 44.23ms | 1,481,830 tok/s | mfu 1.84%
+17900 | loss 1.4345 | lr 5.499918e-05 | 44.15ms | 1,484,230 tok/s | mfu 1.84%
+Created a PretokDataset with rng seed 42
+Created a PretokDataset with rng seed 42
+step 18000: train loss 1.3298, val loss 1.3313
+saving best.pt to /scratch/out
+saving ckpt.pt to /scratch/out
+18000 | loss 1.4305 | lr 4.992888e-05 | 3556.75ms | 18,426 tok/s | mfu 1.66%
+18100 | loss 1.4189 | lr 4.509776e-05 | 44.13ms | 1,484,911 tok/s | mfu 1.68%
+18200 | loss 1.4129 | lr 4.050703e-05 | 44.10ms | 1,485,963 tok/s | mfu 1.70%
+18300 | loss 1.4176 | lr 3.615784e-05 | 44.15ms | 1,484,543 tok/s | mfu 1.72%
+18400 | loss 1.4209 | lr 3.205130e-05 | 44.09ms | 1,486,526 tok/s | mfu 1.74%
+18500 | loss 1.3887 | lr 2.818843e-05 | 44.09ms | 1,486,421 tok/s | mfu 1.75%
+18600 | loss 1.4278 | lr 2.457021e-05 | 44.11ms | 1,485,786 tok/s | mfu 1.76%
+18700 | loss 1.4254 | lr 2.119755e-05 | 44.14ms | 1,484,895 tok/s | mfu 1.78%
+18800 | loss 1.4260 | lr 1.807130e-05 | 44.15ms | 1,484,246 tok/s | mfu 1.79%
+18900 | loss 1.4382 | lr 1.519225e-05 | 44.13ms | 1,485,112 tok/s | mfu 1.80%
+19000 | loss 1.4054 | lr 1.256111e-05 | 44.11ms | 1,485,875 tok/s | mfu 1.80%
+19100 | loss 1.4093 | lr 1.017856e-05 | 44.09ms | 1,486,268 tok/s | mfu 1.81%
+19200 | loss 1.4128 | lr 8.045187e-06 | 44.15ms | 1,484,462 tok/s | mfu 1.82%
+19300 | loss 1.4035 | lr 6.161536e-06 | 44.17ms | 1,483,701 tok/s | mfu 1.82%
+19400 | loss 1.4293 | lr 4.528077e-06 | 44.13ms | 1,485,192 tok/s | mfu 1.83%
+19500 | loss 1.4152 | lr 3.145224e-06 | 44.12ms | 1,485,297 tok/s | mfu 1.84%
+19600 | loss 1.4091 | lr 2.013324e-06 | 44.16ms | 1,484,118 tok/s | mfu 1.84%
+19700 | loss 1.4364 | lr 1.132661e-06 | 44.12ms | 1,485,353 tok/s | mfu 1.84%
+19800 | loss 1.4008 | lr 5.034576e-07 | 44.14ms | 1,484,567 tok/s | mfu 1.85%
+19900 | loss 1.4108 | lr 1.258723e-07 | 44.11ms | 1,485,586 tok/s | mfu 1.85%
+Created a PretokDataset with rng seed 42
+Created a PretokDataset with rng seed 42
+step 20000: train loss 1.3291, val loss 1.3306
+saving best.pt to /scratch/out
+saving ckpt.pt to /scratch/out

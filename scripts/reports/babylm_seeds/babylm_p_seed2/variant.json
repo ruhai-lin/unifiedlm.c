@@ -1,0 +1,26 @@
+{
+  "variant": "P",
+  "m_s": 712,
+  "m_f": 712,
+  "dataset": "babylm",
+  "argv": [
+    "--out_dir=/scratch/out",
+    "--hidden_dim=712",
+    "--vocab_source=custom",
+    "--vocab_size=16384",
+    "--dim=288",
+    "--n_layers=12",
+    "--max_seq_len=512",
+    "--batch_size=64",
+    "--gradient_accumulation_steps=1",
+    "--learning_rate=1e-3",
+    "--warmup_iters=200",
+    "--max_iters=4630",
+    "--weight_decay=0.1",
+    "--beta2=0.95",
+    "--dropout=0.0",
+    "--eval_interval=500",
+    "--eval_iters=9",
+    "--seed=1339"
+  ]
+}

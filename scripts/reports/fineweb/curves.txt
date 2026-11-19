@@ -1,0 +1,60 @@
+#fw42m_s
+step 0: train loss 10.9773, val loss 10.9747
+step 500: train loss 5.4113, val loss 5.3780
+step 1000: train loss 4.5350, val loss 4.4980
+step 1500: train loss 4.0900, val loss 4.0502
+step 2000: train loss 3.8842, val loss 3.8456
+step 2500: train loss 3.7527, val loss 3.7143
+step 3000: train loss 3.6675, val loss 3.6303
+step 3500: train loss 3.6049, val loss 3.5649
+step 4000: train loss 3.5557, val loss 3.5155
+step 4500: train loss 3.5196, val loss 3.4797
+step 5000: train loss 3.4914, val loss 3.4534
+step 5500: train loss 3.4733, val loss 3.4351
+step 6000: train loss 3.4650, val loss 3.4268
+step 6400: train loss 3.4637, val loss 3.4255
+#fw42m_t
+step 0: train loss 10.4716, val loss 10.4705
+step 500: train loss 4.9516, val loss 4.9217
+step 1000: train loss 4.1948, val loss 4.1549
+step 1500: train loss 3.7882, val loss 3.7482
+step 2000: train loss 3.6246, val loss 3.5887
+step 2500: train loss 3.5245, val loss 3.4885
+step 3000: train loss 3.4556, val loss 3.4173
+step 3500: train loss 3.3989, val loss 3.3587
+step 4000: train loss 3.3509, val loss 3.3121
+step 4500: train loss 3.3141, val loss 3.2750
+step 5000: train loss 3.2837, val loss 3.2458
+step 5500: train loss 3.2634, val loss 3.2255
+step 6000: train loss 3.2533, val loss 3.2156
+step 6400: train loss 3.2518, val loss 3.2140
+#fwp42m
+step 0: train loss 10.9587, val loss 10.9570
+step 500: train loss 5.3332, val loss 5.2981
+step 1000: train loss 4.4519, val loss 4.4136
+step 1500: train loss 4.0200, val loss 3.9800
+step 2000: train loss 3.8193, val loss 3.7770
+step 2500: train loss 3.6962, val loss 3.6565
+step 3000: train loss 3.6096, val loss 3.5694
+step 3500: train loss 3.5476, val loss 3.5075
+step 4000: train loss 3.4996, val loss 3.4582
+step 4500: train loss 3.4637, val loss 3.4229
+step 5000: train loss 3.4363, val loss 3.3964
+step 5500: train loss 3.4180, val loss 3.3781
+step 6000: train loss 3.4094, val loss 3.3696
+step 6400: train loss 3.4081, val loss 3.3682
+#fw110m_s
+step 0: train loss 15.0943, val loss 15.0927
+step 1000: train loss 4.8678, val loss 4.8663
+1903 | loss 4.0702 | lr 3.659615e-04 | 4600.59ms | 28,490 tok/s | mfu 10.24%
+#fw110m_t
+step 0: train loss 10.5306, val loss 10.5338
+step 1000: train loss 4.2182, val loss 4.2397
+step 2000: train loss 3.5613, val loss 3.5720
+step 3000: train loss 3.3430, val loss 3.3458
+step 4000: train loss 3.2169, val loss 3.2101
+step 5000: train loss 3.1380, val loss 3.1309
+step 6000: train loss 3.0795, val loss 3.0723
+step 7000: train loss 3.0356, val loss 3.0254
+step 8000: train loss 2.9955, val loss 2.9867
+8377 | loss 3.2319 | lr 3.199617e-04 | 1196.75ms | 109,523 tok/s | mfu 42.17%

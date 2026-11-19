@@ -1,0 +1,192 @@
+S ms=0 mf=0 d=64 T=512 rate=test float32: whole-gradient cosine kernel 0.999998 ctrl 1.000000, rel err kernel 2.09e-03 ctrl 3.83e-07, |g|=3.652e-01
+   log_rate       kernel 2.04e-02  ctrl 1.45e-07  |g|=1.35e-03  |g|/total=3.7e-03
+   conv.weight    kernel 5.85e-03  ctrl 3.91e-07  |g|=2.90e-04  |g|/total=7.9e-04
+   log_w          kernel 4.89e-03  ctrl 2.48e-07  |g|=1.90e-04  |g|/total=5.2e-04
+   key.bias       kernel 4.12e-03  ctrl 2.19e-06  |g|=5.98e-04  |g|/total=1.6e-03
+   key.weight     kernel 3.73e-03  ctrl 2.83e-07  |g|=1.05e-02  |g|/total=2.9e-02
+   log_rate per layer  ref: -1.35e-03 -1.87e-03 -5.52e-03 -4.98e-03 
+                    kernel: -1.38e-03 -1.88e-03 -5.52e-03 -4.94e-03
+S ms=0 mf=0 d=64 T=512 rate=test bfloat16: whole-gradient cosine kernel 0.999986 ctrl 0.999986, rel err kernel 5.30e-03 ctrl 5.38e-03, |g|=3.652e-01
+   log_rate       kernel 2.34e-02  ctrl 1.21e-02  |g|=1.35e-03  |g|/total=3.7e-03
+   log_w          kernel 1.18e-02  ctrl 1.30e-02  |g|=1.90e-04  |g|/total=5.2e-04
+   key.bias       kernel 1.15e-02  ctrl 1.35e-02  |g|=5.98e-04  |g|/total=1.6e-03
+   key.weight     kernel 8.89e-03  ctrl 9.99e-03  |g|=9.16e-03  |g|/total=2.5e-02
+   log_eps        kernel 8.58e-03  ctrl 1.20e-02  |g|=7.15e-05  |g|/total=2.0e-04
+   log_rate per layer  ref: -1.35e-03 -1.87e-03 -5.52e-03 -4.98e-03 
+                    kernel: -1.38e-03 -1.88e-03 -5.51e-03 -4.98e-03
+S ms=0 mf=0 d=64 T=512 rate=train float32: whole-gradient cosine kernel 0.999998 ctrl 1.000000, rel err kernel 1.93e-03 ctrl 4.14e-07, |g|=3.635e-01
+   log_rate       kernel 6.89e-01  ctrl 3.12e-06  |g|=3.04e-07  |g|/total=8.4e-07
+   conv.weight    kernel 6.37e-03  ctrl 6.12e-07  |g|=1.46e-04  |g|/total=4.0e-04
+   key.weight     kernel 5.21e-03  ctrl 3.85e-07  |g|=5.80e-03  |g|/total=1.6e-02
+   key.bias       kernel 3.85e-03  ctrl 2.54e-07  |g|=9.58e-04  |g|/total=2.6e-03
+   log_eps        kernel 3.57e-03  ctrl 1.25e-08  |g|=1.73e-04  |g|/total=4.7e-04
+   log_rate per layer  ref: -3.04e-07 -2.60e-05 -4.03e-05 -5.84e-06 
+                    kernel: -9.46e-08 -2.52e-05 -4.03e-05 -5.17e-06
+S ms=0 mf=0 d=64 T=512 rate=train bfloat16: whole-gradient cosine kernel 0.999984 ctrl 0.999984, rel err kernel 5.71e-03 ctrl 5.71e-03, |g|=3.635e-01
+   log_rate       kernel 1.44e+00  ctrl 8.34e-01  |g|=3.04e-07  |g|/total=8.4e-07
+   log_w          kernel 1.25e-02  ctrl 8.58e-03  |g|=1.70e-04  |g|/total=4.7e-04
+   key.bias       kernel 1.15e-02  ctrl 1.08e-02  |g|=5.10e-04  |g|/total=1.4e-03
+   conv.weight    kernel 1.10e-02  ctrl 1.19e-02  |g|=1.46e-04  |g|/total=4.0e-04
+   mu.weight      kernel 1.03e-02  ctrl 1.05e-02  |g|=6.57e-04  |g|/total=1.8e-03
+   log_rate per layer  ref: -3.04e-07 -2.60e-05 -4.03e-05 -5.84e-06 
+                    kernel: +1.34e-07 -2.57e-05 -4.03e-05 -5.48e-06
+D ms=0 mf=0 d=64 T=512 rate=test float32: whole-gradient cosine kernel 0.999997 ctrl 1.000000, rel err kernel 2.25e-03 ctrl 3.68e-07, |g|=3.648e-01
+   log_rate       kernel 1.90e-02  ctrl 1.12e-07  |g|=1.35e-03  |g|/total=3.7e-03
+   log_w          kernel 7.75e-03  ctrl 2.63e-07  |g|=1.73e-04  |g|/total=4.7e-04
+   key.bias       kernel 5.57e-03  ctrl 1.42e-06  |g|=6.45e-04  |g|/total=1.8e-03
+   conv.weight    kernel 3.96e-03  ctrl 4.61e-07  |g|=2.90e-04  |g|/total=7.9e-04
+   key.weight     kernel 3.59e-03  ctrl 3.61e-07  |g|=1.05e-02  |g|/total=2.9e-02
+   log_rate per layer  ref: -1.35e-03 -1.85e-03 -5.48e-03 -4.98e-03 
+                    kernel: -1.37e-03 -1.85e-03 -5.45e-03 -4.98e-03
+D ms=0 mf=0 d=64 T=512 rate=test bfloat16: whole-gradient cosine kernel 0.999986 ctrl 0.999986, rel err kernel 5.37e-03 ctrl 5.27e-03, |g|=3.648e-01
+   log_w          kernel 1.43e-02  ctrl 1.62e-02  |g|=1.73e-04  |g|/total=4.7e-04
+   key.bias       kernel 9.26e-03  ctrl 1.06e-02  |g|=6.45e-04  |g|/total=1.8e-03
+   key.weight     kernel 8.82e-03  ctrl 9.46e-03  |g|=9.11e-03  |g|/total=2.5e-02
+   conv.weight    kernel 8.40e-03  ctrl 9.74e-03  |g|=2.90e-04  |g|/total=7.9e-04
+   mu.weight      kernel 7.13e-03  ctrl 7.04e-03  |g|=1.47e-03  |g|/total=4.0e-03
+   log_rate per layer  ref: -1.35e-03 -1.85e-03 -5.48e-03 -4.98e-03 
+                    kernel: -1.35e-03 -1.84e-03 -5.50e-03 -4.98e-03
+D ms=0 mf=0 d=64 T=512 rate=train float32: whole-gradient cosine kernel 0.999998 ctrl 1.000000, rel err kernel 1.93e-03 ctrl 4.11e-07, |g|=3.633e-01
+   log_rate       kernel 2.46e-01  ctrl 4.20e-06  |g|=9.52e-07  |g|/total=2.6e-06
+   conv.weight    kernel 6.23e-03  ctrl 5.77e-07  |g|=1.45e-04  |g|/total=4.0e-04
+   key.weight     kernel 4.86e-03  ctrl 3.70e-07  |g|=3.83e-03  |g|/total=1.1e-02
+   log_w          kernel 3.55e-03  ctrl 3.44e-07  |g|=1.76e-04  |g|/total=4.8e-04
+   key.bias       kernel 3.28e-03  ctrl 1.23e-06  |g|=5.95e-04  |g|/total=1.6e-03
+   log_rate per layer  ref: -9.52e-07 -2.60e-05 -4.04e-05 -6.22e-06 
+                    kernel: -7.18e-07 -2.55e-05 -4.00e-05 -5.87e-06
+D ms=0 mf=0 d=64 T=512 rate=train bfloat16: whole-gradient cosine kernel 0.999983 ctrl 0.999984, rel err kernel 5.81e-03 ctrl 5.80e-03, |g|=3.633e-01
+   log_rate       kernel 4.96e-01  ctrl 2.69e-01  |g|=9.52e-07  |g|/total=2.6e-06
+   log_w          kernel 1.26e-02  ctrl 1.00e-02  |g|=1.76e-04  |g|/total=4.8e-04
+   key.bias       kernel 9.73e-03  ctrl 8.57e-03  |g|=5.95e-04  |g|/total=1.6e-03
+   conv.weight    kernel 9.73e-03  ctrl 1.08e-02  |g|=1.45e-04  |g|/total=4.0e-04
+   key.weight     kernel 8.95e-03  ctrl 9.08e-03  |g|=7.00e-03  |g|/total=1.9e-02
+   log_rate per layer  ref: -9.52e-07 -2.60e-05 -4.04e-05 -6.22e-06 
+                    kernel: -4.80e-07 -2.59e-05 -4.03e-05 -5.65e-06
+P ms=105 mf=70 d=64 T=512 rate=test float32: whole-gradient cosine kernel 0.999998 ctrl 1.000000, rel err kernel 1.89e-03 ctrl 4.07e-07, |g|=3.595e-01
+   log_rate       kernel 2.05e-02  ctrl 2.31e-07  |g|=8.44e-04  |g|/total=2.3e-03
+   log_w          kernel 9.26e-03  ctrl 5.31e-07  |g|=1.75e-04  |g|/total=4.9e-04
+   conv.weight    kernel 6.27e-03  ctrl 4.43e-07  |g|=3.38e-04  |g|/total=9.4e-04
+   log_eps_s      kernel 5.71e-03  ctrl 4.71e-07  |g|=8.64e-07  |g|/total=2.4e-06
+   key_f.bias     kernel 4.89e-03  ctrl 1.96e-06  |g|=8.40e-04  |g|/total=2.3e-03
+P ms=105 mf=70 d=64 T=512 rate=test bfloat16: whole-gradient cosine kernel 0.999986 ctrl 0.999986, rel err kernel 5.32e-03 ctrl 5.27e-03, |g|=3.595e-01
+   log_rate       kernel 6.47e-02  ctrl 3.96e-03  |g|=2.33e-03  |g|/total=6.5e-03
+   log_eps_s      kernel 1.87e-02  ctrl 1.37e-03  |g|=3.31e-07  |g|/total=9.2e-07
+   key_f.bias     kernel 1.01e-02  ctrl 1.04e-02  |g|=8.40e-04  |g|/total=2.3e-03
+   key_f.weight   kernel 9.67e-03  ctrl 9.15e-03  |g|=7.54e-03  |g|/total=2.1e-02
+   conv.weight    kernel 9.03e-03  ctrl 9.78e-03  |g|=4.37e-04  |g|/total=1.2e-03
+P ms=105 mf=70 d=64 T=512 rate=train float32: whole-gradient cosine kernel 0.999998 ctrl 1.000000, rel err kernel 2.12e-03 ctrl 4.83e-07, |g|=3.961e-01
+   log_rate       kernel 2.12e-02  ctrl 3.21e-07  |g|=1.55e-05  |g|/total=3.9e-05
+   log_eps_s      kernel 1.82e-02  ctrl 1.50e-07  |g|=8.15e-08  |g|/total=2.1e-07
+   key_f.bias     kernel 8.51e-03  ctrl 2.93e-06  |g|=6.14e-04  |g|/total=1.6e-03
+   log_w          kernel 7.61e-03  ctrl 2.46e-07  |g|=1.64e-04  |g|/total=4.1e-04
+   key_f.weight   kernel 7.49e-03  ctrl 6.72e-07  |g|=3.76e-03  |g|/total=9.5e-03
+P ms=105 mf=70 d=64 T=512 rate=train bfloat16: whole-gradient cosine kernel 0.999983 ctrl 0.999983, rel err kernel 5.88e-03 ctrl 5.90e-03, |g|=3.961e-01
+   log_eps_s      kernel 4.49e-02  ctrl 1.23e-01  |g|=8.15e-08  |g|/total=2.1e-07
+   log_rate       kernel 3.54e-02  ctrl 8.62e-03  |g|=1.55e-05  |g|/total=3.9e-05
+   log_w          kernel 1.41e-02  ctrl 1.66e-02  |g|=1.64e-04  |g|/total=4.1e-04
+   key_f.bias     kernel 1.22e-02  ctrl 1.73e-02  |g|=6.14e-04  |g|/total=1.6e-03
+   conv.weight    kernel 1.15e-02  ctrl 7.73e-03  |g|=2.42e-04  |g|/total=6.1e-04
+A ms=207 mf=207 d=64 T=512 rate=test float32: whole-gradient cosine kernel 0.999998 ctrl 1.000000, rel err kernel 1.88e-03 ctrl 3.62e-07, |g|=3.745e-01
+   log_rate       kernel 6.83e-03  ctrl 1.77e-07  |g|=9.89e-03  |g|/total=2.6e-02
+   key_f.weight   kernel 3.31e-03  ctrl 8.01e-07  |g|=9.29e-03  |g|/total=2.5e-02
+   norm.weight    kernel 3.11e-03  ctrl 3.06e-07  |g|=2.91e-05  |g|/total=7.8e-05
+   log_w          kernel 2.87e-03  ctrl 3.67e-07  |g|=4.18e-04  |g|/total=1.1e-03
+   conv.weight    kernel 2.81e-03  ctrl 6.26e-07  |g|=4.96e-04  |g|/total=1.3e-03
+A ms=207 mf=207 d=64 T=512 rate=test bfloat16: whole-gradient cosine kernel 0.999988 ctrl 0.999988, rel err kernel 4.97e-03 ctrl 5.01e-03, |g|=3.745e-01
+   key_f.weight   kernel 9.35e-03  ctrl 1.07e-02  |g|=9.29e-03  |g|/total=2.5e-02
+   norm.weight    kernel 8.78e-03  ctrl 1.01e-02  |g|=6.84e-06  |g|/total=1.8e-05
+   conv.weight    kernel 8.37e-03  ctrl 8.16e-03  |g|=1.56e-05  |g|/total=4.2e-05
+   key_s.weight   kernel 7.59e-03  ctrl 7.85e-03  |g|=3.81e-04  |g|/total=1.0e-03
+   mu.weight      kernel 7.54e-03  ctrl 7.22e-03  |g|=1.93e-03  |g|/total=5.2e-03
+A ms=207 mf=207 d=64 T=512 rate=train float32: whole-gradient cosine kernel 0.999998 ctrl 1.000000, rel err kernel 1.79e-03 ctrl 3.99e-07, |g|=3.460e-01
+   log_rate       kernel 2.35e-02  ctrl 9.09e-08  |g|=3.83e-05  |g|/total=1.1e-04
+   log_w          kernel 5.68e-03  ctrl 3.97e-07  |g|=1.27e-04  |g|/total=3.7e-04
+   key_f.bias     kernel 5.57e-03  ctrl 2.44e-06  |g|=5.13e-04  |g|/total=1.5e-03
+   conv.weight    kernel 3.59e-03  ctrl 1.11e-06  |g|=2.82e-04  |g|/total=8.2e-04
+   key_f.weight   kernel 3.22e-03  ctrl 1.10e-06  |g|=7.18e-03  |g|/total=2.1e-02
+A ms=207 mf=207 d=64 T=512 rate=train bfloat16: whole-gradient cosine kernel 0.999984 ctrl 0.999983, rel err kernel 5.70e-03 ctrl 5.77e-03, |g|=3.460e-01
+   log_rate       kernel 1.84e-02  ctrl 9.32e-04  |g|=3.83e-05  |g|/total=1.1e-04
+   log_w          kernel 1.28e-02  ctrl 1.47e-02  |g|=1.27e-04  |g|/total=3.7e-04
+   key_f.bias     kernel 1.07e-02  ctrl 1.43e-02  |g|=5.13e-04  |g|/total=1.5e-03
+   weight         kernel 9.98e-03  ctrl 9.85e-03  |g|=5.12e-03  |g|/total=1.5e-02
+   key_s.weight   kernel 9.63e-03  ctrl 9.44e-03  |g|=1.90e-04  |g|/total=5.5e-04
+S ms=0 mf=0 d=64 T=200 rate=test float32: whole-gradient cosine kernel 0.999997 ctrl 1.000000, rel err kernel 2.60e-03 ctrl 2.98e-07, |g|=5.978e-01
+   log_rate       kernel 8.57e-01  ctrl 4.87e-06  |g|=6.96e-05  |g|/total=1.2e-04
+   log_w          kernel 7.06e-03  ctrl 5.68e-07  |g|=2.10e-04  |g|/total=3.5e-04
+   key.bias       kernel 6.48e-03  ctrl 1.78e-06  |g|=8.28e-04  |g|/total=1.4e-03
+   conv.weight    kernel 5.07e-03  ctrl 4.55e-07  |g|=4.21e-04  |g|/total=7.0e-04
+   key.weight     kernel 4.63e-03  ctrl 2.82e-07  |g|=1.57e-02  |g|/total=2.6e-02
+   log_rate per layer  ref: -6.96e-05 -4.60e-04 -4.28e-03 -5.06e-03 
+                    kernel: -9.97e-06 -4.61e-04 -4.28e-03 -5.08e-03
+S ms=0 mf=0 d=64 T=200 rate=test bfloat16: whole-gradient cosine kernel 0.999986 ctrl 0.999987, rel err kernel 5.96e-03 ctrl 5.87e-03, |g|=5.978e-01
+   log_rate       kernel 3.73e-01  ctrl 1.34e-01  |g|=6.96e-05  |g|/total=1.2e-04
+   log_w          kernel 3.11e-02  ctrl 2.39e-02  |g|=2.10e-04  |g|/total=3.5e-04
+   key.bias       kernel 1.72e-02  ctrl 2.21e-02  |g|=8.28e-04  |g|/total=1.4e-03
+   conv.weight    kernel 1.23e-02  ctrl 1.02e-02  |g|=4.21e-04  |g|/total=7.0e-04
+   key.weight     kernel 1.10e-02  ctrl 1.06e-02  |g|=1.29e-02  |g|/total=2.2e-02
+   log_rate per layer  ref: -6.96e-05 -4.60e-04 -4.28e-03 -5.06e-03 
+                    kernel: -4.36e-05 -4.87e-04 -4.30e-03 -5.09e-03
+S ms=0 mf=0 d=64 T=200 rate=train float32: whole-gradient cosine kernel 0.999996 ctrl 1.000000, rel err kernel 2.74e-03 ctrl 3.00e-07, |g|=5.272e-01
+   log_eps        kernel 2.23e-02  ctrl 4.72e-06  |g|=2.41e-05  |g|/total=4.6e-05
+   key.bias       kernel 9.65e-03  ctrl 1.16e-06  |g|=4.29e-04  |g|/total=8.1e-04
+   conv.weight    kernel 6.70e-03  ctrl 5.84e-07  |g|=2.80e-04  |g|/total=5.3e-04
+   key.weight     kernel 6.63e-03  ctrl 5.62e-07  |g|=7.84e-03  |g|/total=1.5e-02
+   log_w          kernel 6.55e-03  ctrl 5.38e-07  |g|=1.47e-04  |g|/total=2.8e-04
+   log_rate per layer  ref: -2.50e-05 -4.96e-05 -1.46e-04 -1.24e-04 
+                    kernel: -2.50e-05 -4.97e-05 -1.46e-04 -1.23e-04
+S ms=0 mf=0 d=64 T=200 rate=train bfloat16: whole-gradient cosine kernel 0.999988 ctrl 0.999985, rel err kernel 5.47e-03 ctrl 5.83e-03, |g|=5.272e-01
+   log_eps        kernel 6.30e-02  ctrl 4.35e-02  |g|=2.41e-05  |g|/total=4.6e-05
+   log_w          kernel 3.37e-02  ctrl 4.13e-02  |g|=1.47e-04  |g|/total=2.8e-04
+   key.bias       kernel 1.68e-02  ctrl 2.39e-02  |g|=5.87e-04  |g|/total=1.1e-03
+   log_rate       kernel 1.43e-02  ctrl 2.26e-03  |g|=4.96e-05  |g|/total=9.4e-05
+   mu.weight      kernel 9.60e-03  ctrl 9.33e-03  |g|=1.65e-03  |g|/total=3.1e-03
+   log_rate per layer  ref: -2.50e-05 -4.96e-05 -1.46e-04 -1.24e-04 
+                    kernel: -2.50e-05 -5.03e-05 -1.47e-04 -1.24e-04
+P ms=105 mf=70 d=64 T=200 rate=test float32: whole-gradient cosine kernel 0.999998 ctrl 1.000000, rel err kernel 1.98e-03 ctrl 3.10e-07, |g|=6.273e-01
+   log_rate       kernel 2.50e-02  ctrl 1.19e-07  |g|=1.15e-03  |g|/total=1.8e-03
+   log_w          kernel 5.92e-03  ctrl 4.12e-07  |g|=3.21e-04  |g|/total=5.1e-04
+   conv.weight    kernel 5.53e-03  ctrl 3.36e-07  |g|=5.52e-04  |g|/total=8.8e-04
+   log_eps_s      kernel 5.38e-03  ctrl 3.29e-07  |g|=4.77e-06  |g|/total=7.6e-06
+   key_f.weight   kernel 5.08e-03  ctrl 5.40e-07  |g|=1.19e-02  |g|/total=1.9e-02
+P ms=105 mf=70 d=64 T=200 rate=test bfloat16: whole-gradient cosine kernel 0.999987 ctrl 0.999988, rel err kernel 5.99e-03 ctrl 5.81e-03, |g|=6.273e-01
+   log_rate       kernel 4.10e-02  ctrl 2.97e-03  |g|=1.15e-03  |g|/total=1.8e-03
+   log_w          kernel 1.64e-02  ctrl 1.49e-02  |g|=3.21e-04  |g|/total=5.1e-04
+   key_f.bias     kernel 1.34e-02  ctrl 1.12e-02  |g|=1.31e-03  |g|/total=2.1e-03
+   conv.weight    kernel 1.03e-02  ctrl 1.07e-02  |g|=5.81e-04  |g|/total=9.3e-04
+   log_eps_f      kernel 1.00e-02  ctrl 9.82e-03  |g|=4.93e-04  |g|/total=7.9e-04
+P ms=105 mf=70 d=64 T=200 rate=train float32: whole-gradient cosine kernel 0.999997 ctrl 1.000000, rel err kernel 2.36e-03 ctrl 3.47e-07, |g|=6.523e-01
+   log_eps_s      kernel 2.50e-02  ctrl 3.55e-06  |g|=7.10e-07  |g|/total=1.1e-06
+   log_rate       kernel 1.82e-02  ctrl 8.58e-07  |g|=3.20e-05  |g|/total=4.9e-05
+   key_f.bias     kernel 9.49e-03  ctrl 9.87e-07  |g|=1.26e-03  |g|/total=1.9e-03
+   log_w          kernel 8.30e-03  ctrl 4.40e-07  |g|=3.36e-04  |g|/total=5.1e-04
+   key_f.weight   kernel 5.36e-03  ctrl 8.88e-07  |g|=1.78e-02  |g|/total=2.7e-02
+P ms=105 mf=70 d=64 T=200 rate=train bfloat16: whole-gradient cosine kernel 0.999987 ctrl 0.999987, rel err kernel 5.74e-03 ctrl 5.83e-03, |g|=6.523e-01
+   key_f.bias     kernel 1.65e-02  ctrl 1.46e-02  |g|=1.26e-03  |g|/total=1.9e-03
+   log_w          kernel 1.59e-02  ctrl 6.64e-03  |g|=2.76e-04  |g|/total=4.2e-04
+   log_eps_s      kernel 1.56e-02  ctrl 1.14e-02  |g|=7.10e-07  |g|/total=1.1e-06
+   conv.weight    kernel 1.38e-02  ctrl 1.13e-02  |g|=4.04e-04  |g|/total=6.2e-04
+   log_rate       kernel 1.37e-02  ctrl 1.17e-02  |g|=3.20e-05  |g|/total=4.9e-05
+S ms=0 mf=0 d=288 T=256 rate=test float32: whole-gradient cosine kernel 0.999998 ctrl 1.000000, rel err kernel 1.84e-03 ctrl 3.76e-07, |g|=1.105e+00
+   log_rate       kernel 3.06e-03  ctrl 1.33e-08  |g|=2.27e-02  |g|/total=2.1e-02
+   key.weight     kernel 2.86e-03  ctrl 5.99e-07  |g|=4.84e-02  |g|/total=4.4e-02
+   conv.weight    kernel 2.84e-03  ctrl 5.50e-07  |g|=2.03e-03  |g|/total=1.8e-03
+   val.weight     kernel 2.40e-03  ctrl 4.18e-07  |g|=5.22e-02  |g|/total=4.7e-02
+   log_w          kernel 2.33e-03  ctrl 3.42e-07  |g|=1.20e-03  |g|/total=1.1e-03
+S ms=0 mf=0 d=288 T=256 rate=test bfloat16: whole-gradient cosine kernel 0.999986 ctrl 0.999986, rel err kernel 5.35e-03 ctrl 5.35e-03, |g|=1.105e+00
+   log_w          kernel 9.93e-03  ctrl 9.67e-03  |g|=1.20e-03  |g|/total=1.1e-03
+   key.weight     kernel 8.94e-03  ctrl 8.49e-03  |g|=4.84e-02  |g|/total=4.4e-02
+   key.bias       kernel 8.61e-03  ctrl 8.91e-03  |g|=4.08e-03  |g|/total=3.7e-03
+   conv.weight    kernel 8.46e-03  ctrl 8.13e-03  |g|=2.03e-03  |g|/total=1.8e-03
+   mu.weight      kernel 7.74e-03  ctrl 7.61e-03  |g|=2.54e-03  |g|/total=2.3e-03
+S ms=0 mf=0 d=288 T=256 rate=train float32: whole-gradient cosine kernel 0.999998 ctrl 1.000000, rel err kernel 1.91e-03 ctrl 4.04e-07, |g|=1.107e+00
+   log_rate       kernel 5.07e-03  ctrl 9.65e-07  |g|=9.85e-05  |g|/total=8.9e-05
+   key.weight     kernel 3.46e-03  ctrl 6.19e-07  |g|=4.02e-02  |g|/total=3.6e-02
+   conv.weight    kernel 3.36e-03  ctrl 6.31e-07  |g|=1.64e-03  |g|/total=1.5e-03
+   log_w          kernel 2.64e-03  ctrl 2.19e-07  |g|=1.23e-03  |g|/total=1.1e-03
+   val.weight     kernel 2.59e-03  ctrl 4.37e-07  |g|=4.98e-02  |g|/total=4.5e-02
+S ms=0 mf=0 d=288 T=256 rate=train bfloat16: whole-gradient cosine kernel 0.999985 ctrl 0.999985, rel err kernel 5.48e-03 ctrl 5.53e-03, |g|=1.107e+00
+   key.weight     kernel 9.71e-03  ctrl 9.96e-03  |g|=4.02e-02  |g|/total=3.6e-02
+   key.bias       kernel 9.55e-03  ctrl 9.18e-03  |g|=3.77e-03  |g|/total=3.4e-03
+   conv.weight    kernel 9.21e-03  ctrl 9.27e-03  |g|=2.00e-03  |g|/total=1.8e-03
+   log_w          kernel 8.69e-03  ctrl 8.40e-03  |g|=1.23e-03  |g|/total=1.1e-03
+   mu.weight      kernel 8.13e-03  ctrl 8.12e-03  |g|=1.94e-03  |g|/total=1.7e-03

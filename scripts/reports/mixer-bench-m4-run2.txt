@@ -1,0 +1,69 @@
+# Same build and machine as mixer-bench-m4.txt, run 2 of 2, right after run 1
+260K  d=64 layers=10 m=140 vocab=512, state 0.4 MB
+  S-merged            19.1 us/token  1.00x
+  S-split             19.2 us/token  1.01x
+  S-lazy              18.9 us/token  0.99x
+  S-fused             19.1 us/token  1.00x
+  S-fused-lazy        19.3 us/token  1.01x
+  P-free-fused        24.0 us/token  1.25x
+  P-free              24.0 us/token  1.25x   lazy      23.7 us/token  1.24x
+  P(69,140)           19.4 us/token  1.02x   lazy      19.2 us/token  1.00x
+  P(93,93)            16.7 us/token  0.87x   lazy      16.5 us/token  0.86x
+  P(105,70)           15.6 us/token  0.81x   lazy      15.5 us/token  0.81x
+  A(207,207)          18.4 us/token  0.96x   lazy      18.3 us/token  0.96x
+  whole model, one token
+  S-merged            23.5 us/token  1.00x  whole
+  S-fused             23.6 us/token  1.01x  whole
+  P-free-fused        28.4 us/token  1.21x  whole
+  P-free              28.5 us/token  1.21x  whole
+  P(69,140)           23.9 us/token  1.02x  whole
+  P(93,93)            21.8 us/token  0.93x  whole
+  P(105,70)           20.2 us/token  0.86x  whole
+  A(207,207)          21.6 us/token  0.92x  whole
+15M   d=288 layers=12 m=712 vocab=32000, state 9.8 MB
+  S-merged           512.7 us/token  1.00x
+  S-split            537.2 us/token  1.05x
+  S-lazy             534.8 us/token  1.04x
+  S-fused            516.5 us/token  1.01x
+  S-fused-lazy       510.6 us/token  1.00x
+  P-free-fused       673.4 us/token  1.31x
+  P-free             716.1 us/token  1.40x   lazy     711.9 us/token  1.39x
+  P(355,712)         538.7 us/token  1.05x   lazy     537.6 us/token  1.05x
+  P(474,474)         453.3 us/token  0.88x   lazy     453.6 us/token  0.88x
+  P(534,356)         402.7 us/token  0.79x   lazy     403.6 us/token  0.79x
+  A(1045,1045)       510.9 us/token  1.00x   lazy     507.7 us/token  0.99x
+  whole model, one token
+  S-merged          1207.4 us/token  1.00x  whole
+  S-fused           1189.3 us/token  0.98x  whole
+  P-free-fused      1364.4 us/token  1.13x  whole
+  P-free            1401.7 us/token  1.16x  whole
+  P(355,712)        1238.6 us/token  1.03x  whole
+  P(474,474)        1134.1 us/token  0.94x  whole
+  P(534,356)        1080.9 us/token  0.90x  whole
+  A(1045,1045)      1154.4 us/token  0.96x  whole
+42M   d=512 layers=16 m=1280 vocab=32000, state 41.9 MB
+  S-merged          2455.7 us/token  1.00x
+  S-split           2605.8 us/token  1.06x
+  S-lazy            2613.8 us/token  1.06x
+  S-fused           2921.7 us/token  1.19x
+  S-fused-lazy      2851.2 us/token  1.16x
+  P-free-fused      3948.8 us/token  1.61x
+  P-free            3369.1 us/token  1.37x   lazy    3331.0 us/token  1.36x
+  whole model, one token
+  S-merged          3892.5 us/token  1.00x  whole
+  S-fused           4227.1 us/token  1.09x  whole
+  P-free-fused      5182.1 us/token  1.33x  whole
+  P-free            4702.5 us/token  1.21x  whole
+110M  d=768 layers=24 m=1912 vocab=32000, state 141.0 MB
+  S-merged          8288.9 us/token  1.00x
+  S-split           9137.6 us/token  1.10x
+  S-lazy            9082.1 us/token  1.10x
+  S-fused           8244.5 us/token  0.99x
+  S-fused-lazy      8246.9 us/token  0.99x
+  P-free-fused     10725.5 us/token  1.29x
+  P-free           11601.0 us/token  1.40x   lazy   11472.5 us/token  1.38x
+  whole model, one token
+  S-merged         10996.4 us/token  1.00x  whole
+  S-fused          11207.2 us/token  1.02x  whole
+  P-free-fused     13406.4 us/token  1.22x  whole
+  P-free           14088.4 us/token  1.28x  whole

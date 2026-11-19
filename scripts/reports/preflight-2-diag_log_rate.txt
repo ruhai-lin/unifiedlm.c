@@ -1,0 +1,73 @@
+S m_s=0 m_f=0 d=64 T=512 rate=test
+  call 0: dg -2.610e-02  formula in float64 1.4e-14  kernel 2.99e-02  fix 4.02e-02  simulated as kernel 6.92e-03  consistent 3.58e-03
+  call 1: dg -3.768e-02  formula in float64 1.8e-16  kernel 3.14e-02  fix 1.58e-02  simulated as kernel 1.34e-02  consistent 2.14e-03
+  call 2: dg -3.215e-02  formula in float64 1.5e-15  kernel 1.18e-02  fix 2.18e-03  simulated as kernel 1.01e-02  consistent 8.04e-04
+  call 3: dg -2.418e-02  formula in float64 2.0e-15  kernel 1.27e-02  fix 1.44e-02  simulated as kernel 6.52e-04  consistent 1.36e-03
+
+S m_s=0 m_f=0 d=64 T=512 rate=train
+  call 0: dg -6.042e-03  formula in float64 5.7e-16  kernel 6.21e-02  fix 4.41e-02  simulated as kernel 6.54e-03  consistent 1.15e-02
+  call 1: dg -3.484e-01  formula in float64 1.1e-15  kernel 6.93e-05  fix 8.95e-05  simulated as kernel 1.27e-04  consistent 2.82e-04
+  call 2: dg -3.298e-01  formula in float64 6.7e-16  kernel 4.31e-04  fix 1.14e-03  simulated as kernel 1.57e-03  consistent 3.76e-06
+  call 3: dg -7.139e-01  formula in float64 0.0e+00  kernel 6.15e-04  fix 1.76e-04  simulated as kernel 1.29e-04  consistent 3.10e-04
+
+D m_s=0 m_f=0 d=64 T=512 rate=test
+  call 0: dg -2.500e-02  formula in float64 1.7e-14  kernel 2.18e-02  fix 3.25e-02  simulated as kernel 6.95e-03  consistent 4.02e-03
+  call 1: dg -3.805e-02  formula in float64 1.6e-15  kernel 2.18e-02  fix 1.08e-02  simulated as kernel 1.08e-02  consistent 8.39e-05
+  call 2: dg -3.194e-02  formula in float64 3.3e-15  kernel 9.03e-03  fix 1.19e-02  simulated as kernel 1.61e-03  consistent 1.19e-03
+  call 3: dg -2.427e-02  formula in float64 1.1e-15  kernel 3.70e-02  fix 2.55e-02  simulated as kernel 1.26e-02  consistent 8.67e-04
+
+D m_s=0 m_f=0 d=64 T=512 rate=train
+  call 0: dg -2.595e-03  formula in float64 4.0e-15  kernel 1.23e-01  fix 8.06e-02  simulated as kernel 3.77e-03  consistent 3.81e-02
+  call 1: dg -3.525e-01  formula in float64 6.3e-16  kernel 1.74e-03  fix 1.31e-03  simulated as kernel 2.75e-04  consistent 1.58e-04
+  call 2: dg -3.288e-01  formula in float64 3.4e-16  kernel 8.94e-04  fix 7.01e-04  simulated as kernel 1.70e-04  consistent 2.59e-05
+  call 3: dg -7.057e-01  formula in float64 4.7e-16  kernel 1.06e-03  fix 6.20e-04  simulated as kernel 3.97e-04  consistent 4.10e-05
+
+P m_s=93 m_f=93 d=64 T=512 rate=test
+  call 0: dg +1.924e-02  formula in float64 4.7e-15  kernel 3.94e-02  fix 4.89e-02  simulated as kernel 1.19e-02  consistent 2.39e-03
+  call 1: dg +4.134e-03  formula in float64 6.3e-16  kernel 9.83e-02  fix 1.21e-01  simulated as kernel 2.71e-02  consistent 4.53e-03
+  call 2: dg -1.747e-02  formula in float64 7.7e-15  kernel 3.16e-02  fix 3.26e-02  simulated as kernel 1.49e-03  consistent 2.60e-03
+  call 3: dg -1.400e-01  formula in float64 2.0e-16  kernel 3.67e-03  fix 4.49e-04  simulated as kernel 3.51e-03  consistent 6.12e-04
+
+P m_s=93 m_f=93 d=64 T=512 rate=train
+  call 0: dg +1.096e-01  formula in float64 5.1e-16  kernel 9.61e-04  fix 1.06e-03  simulated as kernel 3.71e-03  consistent 3.81e-03
+  call 1: dg -2.163e-01  formula in float64 9.0e-16  kernel 2.08e-03  fix 2.07e-03  simulated as kernel 2.24e-04  consistent 2.30e-04
+  call 2: dg -5.243e-01  formula in float64 0.0e+00  kernel 1.93e-04  fix 1.76e-04  simulated as kernel 6.24e-04  consistent 9.97e-04
+  call 3: dg -3.190e-01  formula in float64 1.7e-16  kernel 3.56e-03  fix 3.87e-03  simulated as kernel 1.43e-04  consistent 4.47e-04
+
+P m_s=105 m_f=70 d=64 T=512 rate=test
+  call 0: dg +9.536e-02  formula in float64 0.0e+00  kernel 3.63e-05  fix 5.45e-03  simulated as kernel 4.63e-03  consistent 8.51e-04
+  call 1: dg +2.045e-02  formula in float64 1.7e-15  kernel 2.20e-02  fix 6.14e-03  simulated as kernel 1.21e-02  consistent 3.72e-03
+  call 2: dg +1.321e-03  formula in float64 6.6e-16  kernel 1.24e-01  fix 2.01e-02  simulated as kernel 1.38e-01  consistent 2.23e-03
+  call 3: dg -9.410e-02  formula in float64 2.1e-15  kernel 5.09e-04  fix 2.61e-03  simulated as kernel 2.39e-03  consistent 2.76e-04
+
+P m_s=105 m_f=70 d=64 T=512 rate=train
+  call 0: dg +9.607e-02  formula in float64 8.7e-16  kernel 3.63e-03  fix 4.14e-03  simulated as kernel 3.90e-04  consistent 9.03e-04
+  call 1: dg -4.506e-01  formula in float64 4.9e-16  kernel 3.88e-04  fix 2.20e-03  simulated as kernel 1.30e-03  consistent 5.15e-04
+  call 2: dg +2.109e-01  formula in float64 1.7e-15  kernel 1.49e-04  fix 2.41e-03  simulated as kernel 6.12e-04  consistent 2.02e-03
+  call 3: dg -7.528e-01  formula in float64 1.5e-16  kernel 1.54e-04  fix 3.00e-04  simulated as kernel 5.07e-05  consistent 9.63e-05
+
+S m_s=0 m_f=0 d=64 T=200 rate=test
+  call 0: dg -8.516e-02  formula in float64 1.8e-15  kernel 4.52e-03  fix 1.85e-03  simulated as kernel 3.80e-03  consistent 1.12e-03
+  call 1: dg -9.317e-02  formula in float64 7.4e-16  kernel 3.84e-03  fix 4.15e-04  simulated as kernel 3.35e-03  consistent 8.97e-04
+  call 2: dg -5.893e-02  formula in float64 7.1e-16  kernel 2.57e-03  fix 2.51e-03  simulated as kernel 6.98e-04  consistent 7.71e-04
+  call 3: dg -1.952e-02  formula in float64 4.4e-15  kernel 1.29e-02  fix 1.22e-02  simulated as kernel 5.41e-03  consistent 4.82e-03
+
+S m_s=0 m_f=0 d=64 T=200 rate=train
+  call 0: dg +1.057e-01  formula in float64 0.0e+00  kernel 9.74e-04  fix 4.21e-04  simulated as kernel 1.03e-03  consistent 1.58e-03
+  call 1: dg +3.432e-02  formula in float64 1.2e-15  kernel 1.43e-02  fix 2.28e-02  simulated as kernel 1.29e-03  consistent 7.11e-03
+  call 2: dg -1.742e-01  formula in float64 3.2e-16  kernel 4.60e-04  fix 1.43e-03  simulated as kernel 6.45e-05  consistent 9.08e-04
+  call 3: dg -1.099e-01  formula in float64 3.8e-16  kernel 1.42e-03  fix 1.42e-03  simulated as kernel 7.13e-04  consistent 6.97e-04
+
+S m_s=0 m_f=0 d=288 T=256 rate=test
+  call 0: dg +3.186e-01  formula in float64 0.0e+00  kernel 3.05e-03  fix 2.76e-03  simulated as kernel 1.14e-03  consistent 8.56e-04
+  call 1: dg +2.168e-01  formula in float64 1.3e-16  kernel 2.27e-03  fix 9.62e-05  simulated as kernel 2.29e-03  consistent 1.17e-04
+  call 2: dg +4.153e-01  formula in float64 1.3e-16  kernel 1.72e-03  fix 1.05e-03  simulated as kernel 3.62e-04  consistent 2.96e-04
+  call 3: dg +3.343e-01  formula in float64 3.3e-16  kernel 4.61e-03  fix 2.78e-03  simulated as kernel 1.74e-03  consistent 8.66e-05
+
+S m_s=0 m_f=0 d=288 T=256 rate=train
+  call 0: dg +2.264e-01  formula in float64 1.2e-16  kernel 5.05e-03  fix 4.95e-03  simulated as kernel 9.00e-04  consistent 7.95e-04
+  call 1: dg +1.035e-01  formula in float64 4.0e-16  kernel 2.37e-03  fix 3.77e-03  simulated as kernel 4.54e-03  consistent 3.14e-03
+  call 2: dg -8.240e-02  formula in float64 2.4e-15  kernel 2.70e-03  fix 2.58e-03  simulated as kernel 1.32e-03  consistent 1.44e-03
+  call 3: dg -4.150e-01  formula in float64 2.7e-16  kernel 2.41e-03  fix 2.17e-03  simulated as kernel 2.35e-04  consistent 1.94e-06
+
+[exited with code 0]

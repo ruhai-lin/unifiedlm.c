@@ -1,0 +1,54 @@
+{
+ "S": [
+  {
+   "slots_per_key": 2.7653331756591797,
+   "slots_per_filler": 3.953795909881592,
+   "slots_per_question": 21.204113006591797,
+   "filler_share_of_question_read": 0.9210873059928417
+  },
+  {
+   "slots_per_key": 4.934823989868164,
+   "slots_per_filler": 13.047320365905762,
+   "slots_per_question": 5.581301212310791,
+   "filler_share_of_question_read": 0.8855686709284782
+  },
+  {
+   "slots_per_key": 3.859212875366211,
+   "slots_per_filler": 21.789539337158203,
+   "slots_per_question": 14.589941024780273,
+   "filler_share_of_question_read": 0.7951393499970436
+  },
+  {
+   "slots_per_key": 29.07491683959961,
+   "slots_per_filler": 14.133026123046875,
+   "slots_per_question": 10.856622695922852,
+   "filler_share_of_question_read": 0.9289147853851318
+  }
+ ],
+ "P": [
+  {
+   "slots_per_key": 11.146738052368164,
+   "slots_per_filler": 14.870940208435059,
+   "slots_per_question": 36.01955795288086,
+   "filler_share_of_question_read": 0.9041743502020836
+  },
+  {
+   "slots_per_key": 1.2546442747116089,
+   "slots_per_filler": 2.944596290588379,
+   "slots_per_question": 1.9768307209014893,
+   "filler_share_of_question_read": 0.8817620724439621
+  },
+  {
+   "slots_per_key": 3.8469529151916504,
+   "slots_per_filler": 19.528888702392578,
+   "slots_per_question": 7.380354881286621,
+   "filler_share_of_question_read": 0.7624085880815983
+  },
+  {
+   "slots_per_key": 0.9148201942443848,
+   "slots_per_filler": 0.9512851238250732,
+   "slots_per_question": 0.9637202024459839,
+   "filler_share_of_question_read": 0.4686216898262501
+  }
+ ]
+}

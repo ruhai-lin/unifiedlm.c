@@ -1,0 +1,15 @@
+# 2a s lr=5e-4: final val 1.6214 at step 5000, min 1.6214, stable
+# 2a s lr=1e-3: final val 1.5157 at step 5000, min 1.5157, stable
+# 2a s lr=2e-3: final val 1.4297 at step 5000, min 1.4297, stable
+# 2a d lr=5e-4: final val 1.6100 at step 5000, min 1.6100, stable
+# 2a d lr=1e-3: final val 1.5125 at step 5000, min 1.5125, stable
+# 2a d lr=2e-3: final val 1.4322 at step 5000, min 1.4322, stable
+# 2a peq69x140 lr=5e-4: final val 1.6842 at step 5000, min 1.6842, stable
+# 2a peq69x140 lr=1e-3: final val 1.5825 at step 5000, min 1.5825, stable
+# 2a peq69x140 lr=2e-3: final val 1.5088 at step 5000, min 1.5088, stable
+# 2a peq105x70 lr=5e-4: final val 1.6264 at step 5000, min 1.6264, stable
+# 2a peq105x70 lr=1e-3: final val 1.5286 at step 5000, min 1.5286, stable
+# 2a peq105x70 lr=2e-3: final val 1.4414 at step 5000, min 1.4414, stable
+# 2a a lr=5e-4: final val 1.6536 at step 5000, min 1.6536, stable
+# 2a a lr=1e-3: final val 1.5533 at step 5000, min 1.5533, stable
+# 2a a lr=2e-3: final val 1.4717 at step 5000, min 1.4717, stable

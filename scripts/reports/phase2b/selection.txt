@@ -1,0 +1,10 @@
+# 2b s lr=1e-3: final val 1.3672 at step 20000, min 1.3672, stable
+# 2b s lr=2e-3: final val 1.3291 at step 20000, min 1.3291, stable
+# 2b d lr=1e-3: final val 1.3540 at step 20000, min 1.3540, stable
+# 2b d lr=2e-3: final val 1.3306 at step 20000, min 1.3306, stable
+# 2b peq69x140 lr=1e-3: final val 1.4161 at step 20000, min 1.4161, stable
+# 2b peq69x140 lr=2e-3: final val 1.3839 at step 20000, min 1.3839, stable
+# 2b peq105x70 lr=1e-3: final val 1.3739 at step 20000, min 1.3739, stable
+# 2b peq105x70 lr=2e-3: final val 1.3460 at step 20000, min 1.3460, stable
+# 2b a lr=1e-3: final val 1.3948 at step 20000, min 1.3948, stable
+# 2b a lr=2e-3: final val 1.3566 at step 20000, min 1.3566, stable

@@ -1,0 +1,14 @@
+# Data, environment tarball and run outputs for the unification experiment. US West, same region as bak-hpc1.
+# Holds no pip or conda installs: NRP prohibits them on CephFS, so the environment is stored as one tar file.
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: ulm-storage
+  namespace: garyyang
+spec:
+  accessModes:
+    - ReadWriteMany
+  storageClassName: rook-cephfs
+  resources:
+    requests:
+      storage: 256Gi

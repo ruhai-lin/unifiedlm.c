@@ -1,0 +1,63 @@
+tar: Ignoring unknown extended header keyword 'LIBARCHIVE.xattr.com.apple.provenance'
+tar: Ignoring unknown extended header keyword 'LIBARCHIVE.xattr.com.apple.provenance'
+tar: Ignoring unknown extended header keyword 'LIBARCHIVE.xattr.com.apple.provenance'
+tar: Ignoring unknown extended header keyword 'LIBARCHIVE.xattr.com.apple.provenance'
+tar: Ignoring unknown extended header keyword 'LIBARCHIVE.xattr.com.apple.provenance'
+tar: Ignoring unknown extended header keyword 'LIBARCHIVE.xattr.com.apple.provenance'
+tar: Ignoring unknown extended header keyword 'LIBARCHIVE.xattr.com.apple.provenance'
+tar: Ignoring unknown extended header keyword 'LIBARCHIVE.xattr.com.apple.provenance'
+tar: Ignoring unknown extended header keyword 'LIBARCHIVE.xattr.com.apple.provenance'
+tar: Ignoring unknown extended header keyword 'LIBARCHIVE.xattr.com.apple.provenance'
+tar: Ignoring unknown extended header keyword 'LIBARCHIVE.xattr.com.apple.provenance'
+tar: Ignoring unknown extended header keyword 'LIBARCHIVE.xattr.com.apple.provenance'
+tar: Ignoring unknown extended header keyword 'LIBARCHIVE.xattr.com.apple.provenance'
+tar: Ignoring unknown extended header keyword 'LIBARCHIVE.xattr.com.apple.provenance'
+tar: Ignoring unknown extended header keyword 'LIBARCHIVE.xattr.com.apple.provenance'
+tar: Ignoring unknown extended header keyword 'LIBARCHIVE.xattr.com.apple.provenance'
+tar: Ignoring unknown extended header keyword 'LIBARCHIVE.xattr.com.apple.provenance'
+tar: Ignoring unknown extended header keyword 'LIBARCHIVE.xattr.com.apple.provenance'
+tar: Ignoring unknown extended header keyword 'LIBARCHIVE.xattr.com.apple.provenance'
+tar: Ignoring unknown extended header keyword 'LIBARCHIVE.xattr.com.apple.provenance'
+tar: Ignoring unknown extended header keyword 'LIBARCHIVE.xattr.com.apple.provenance'
+5
+name, memory.total [MiB], driver_version
+Tesla T4, 15360 MiB, 580.82.07
+torch 2.10.0+cu128 triton 3.6.0 Tesla T4 (7, 5)
+== STAGE kernel check, kernel as is (bf16 inside)
+Traceback (most recent call last):
+  File "/content/ulm/scripts/colab/check_kernel_fp16.py", line 15, in <module>
+    exec(compile(src, sys.argv[0], "exec"), {"__name__": "__main__", "__file__": sys.argv[0]})
+  File "/content/ulm/scripts/check_kernel.py", line 29, in <module>
+    import variants                    # noqa: E402
+    ^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'variants'
+== STAGE kernel check, fp16 inside
+Traceback (most recent call last):
+  File "/content/ulm_fp16/scripts/colab/check_kernel_fp16.py", line 15, in <module>
+    exec(compile(src, sys.argv[0], "exec"), {"__name__": "__main__", "__file__": sys.argv[0]})
+  File "/content/ulm_fp16/scripts/check_kernel.py", line 29, in <module>
+    import variants                    # noqa: E402
+    ^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'variants'
+== STAGE speed (ulm_fp16)
+{"gpu": "Tesla T4", "torch": "2.10.0+cu128", "cpus": 2}
+{"variant": "S", "size": "15M", "params": 15167352, "bs": 8, "seq": 1024, "ms_per_step": 368.6, "tok_per_s": 22227, "peak_gib": 3.33, "warmup_s": 902.5, "gpu": "Tesla T4", "dtype": "float16", "loss": 6.989}
+{"variant": "S", "size": "15M", "params": 15167352, "bs": 16, "seq": 1024, "ms_per_step": 712.4, "tok_per_s": 22997, "peak_gib": 6.42, "warmup_s": 223.9, "gpu": "Tesla T4", "dtype": "float16", "loss": 7.298}
+{"variant": "S", "size": "15M", "bs": 32, "failed": "oom"}
+{"variant": "T", "size": "15M", "params": 15191712, "bs": 8, "seq": 1024, "ms_per_step": 86.4, "tok_per_s": 94859, "peak_gib": 2.16, "warmup_s": 31.4, "gpu": "Tesla T4", "dtype": "float16", "loss": 6.198}
+{"variant": "T", "size": "15M", "params": 15191712, "bs": 16, "seq": 1024, "ms_per_step": 165.6, "tok_per_s": 98964, "peak_gib": 4.12, "warmup_s": 31.1, "gpu": "Tesla T4", "dtype": "float16", "loss": 6.31}
+{"variant": "T", "size": "15M", "params": 15191712, "bs": 32, "seq": 1024, "ms_per_step": 310.6, "tok_per_s": 105498, "peak_gib": 8.02, "warmup_s": 31.7, "gpu": "Tesla T4", "dtype": "float16", "loss": 6.713}
+{"variant": "T", "size": "15M", "bs": 64, "failed": "oom"}
+== STAGE converge (ulm_fp16)
+step 0: train loss 9.7493, val loss 9.7394
+100 | loss 5.6947 | lr 5.000000e-04 | 1331.36ms | 24,612 tok/s | mfu 0.80%
+step 500: train loss 3.9535, val loss 3.8684
+500 | loss 3.7912 | lr 9.887271e-04 | 14406.25ms | 2,275 tok/s | mfu 0.73%
+step 1000: train loss 3.4941, val loss 3.5252
+1000 | loss 3.6499 | lr 9.216693e-04 | 10618.30ms | 3,086 tok/s | mfu 0.73%
+1004 | loss 3.4000 | lr 9.209054e-04 | 1317.46ms | 24,872 tok/s | mfu 0.75%
+1005 | loss 3.4951 | lr 9.207139e-04 | 1321.88ms | 24,789 tok/s | mfu 0.76%
+1006 | loss 3.3841 | lr 9.205222e-04 | 1326.26ms | 24,707 tok/s | mfu 0.76%
+1007 | loss 3.5983 | lr 9.203302e-04 | 1321.52ms | 24,796 tok/s | mfu 0.77%
+1008 | loss 3.4720 | lr 9.201381e-04 | 1331.84ms | 24,604 tok/s | mfu 0.77%
+== SMOKE DONE

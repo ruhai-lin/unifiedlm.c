@@ -1,0 +1,4 @@
+m2kv_s_d32_seed1 --task=m2 --filler=kv --model=S --dim=32 --lr=1e-3 --steps=40000 --counts=16 --gmax=256 --gaps=0,64,256,1024,4096 --batch=128 --save=1 --seed=1
+m2kv_p_d32_seed1 --task=m2 --filler=kv --model=P --dim=32 --lr=1e-3 --steps=40000 --counts=16 --gmax=256 --gaps=0,64,256,1024,4096 --batch=128 --save=1 --seed=1
+m2kv_s_d32_seed2 --task=m2 --filler=kv --model=S --dim=32 --lr=1e-3 --steps=40000 --counts=16 --gmax=256 --gaps=0,64,256,1024,4096 --batch=128 --save=1 --seed=2
+m2kv_p_d32_seed2 --task=m2 --filler=kv --model=P --dim=32 --lr=1e-3 --steps=40000 --counts=16 --gmax=256 --gaps=0,64,256,1024,4096 --batch=128 --save=1 --seed=2

@@ -68,6 +68,7 @@ warmup_iters = 1000
 device = "cuda"
 dtype = "bfloat16"
 compile = True
+seed = 1337
 # -----------------------------------------------------------------------------
 config_keys = [
     k
@@ -107,7 +108,7 @@ if master_process:
 
 if master_process:
     os.makedirs(out_dir, exist_ok=True)
-torch.manual_seed(1337 + seed_offset)
+torch.manual_seed(seed + seed_offset)
 torch.backends.cuda.matmul.allow_tf32 = True
 torch.backends.cudnn.allow_tf32 = True
 device_type = "cuda" if "cuda" in device else "cpu"
